@@ -77,11 +77,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActivityMathSpatialAudio.cs" />
     <Compile Include="ActivityUdaUC.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ActivityUdaUC.Designer.cs">
       <DependentUpon>ActivityUdaUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activity_Stanza.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Activity_Stanza.Designer.cs">
+      <DependentUpon>Activity_Stanza.cs</DependentUpon>
     </Compile>
     <Compile Include="Business_Logic.cs" />
     <Compile Include="debugInfo.cs">
@@ -115,6 +122,9 @@
     <Compile Include="uda_server_communication.cs" />
     <EmbeddedResource Include="ActivityUdaUC.resx">
       <DependentUpon>ActivityUdaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activity_Stanza.resx">
+      <DependentUpon>Activity_Stanza.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="debugInfo.resx">
       <DependentUpon>debugInfo.cs</DependentUpon>
