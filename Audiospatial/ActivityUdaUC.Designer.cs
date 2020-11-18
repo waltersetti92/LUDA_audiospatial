@@ -69,6 +69,7 @@
             this.btStart.TabIndex = 19;
             this.btStart.Text = "INIZIA";
             this.btStart.UseVisualStyleBackColor = true;
+            this.btStart.Click += new System.EventHandler(this.btStart_Click);
             // 
             // btExit
             // 

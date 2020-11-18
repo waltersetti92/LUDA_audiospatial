@@ -19,7 +19,30 @@ namespace Audiospatial
             this.BackgroundImage = Properties.Resources.bed4;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
+        public void setPos(int w, int h)
+        {
 
+            int offset = 0;
+            Location = new Point(offset, offset);
+            Width = w - 1 * offset;
+            Height = h - 1 * offset;
+
+        }
+        public void setMessage_ps(string bt_text)
+        {
+            Visible = true;
+            if (bt_text.Length > 0)
+            {
+                Start.Text = bt_text;
+                Start.Visible = true;
+                Start.Select();
+            }
+            else
+            {
+                Start.Text = "";
+                Start.Visible = false;
+            }
+        }
         private void Alarm_Click(object sender, EventArgs e)
         {
 
@@ -28,6 +51,11 @@ namespace Audiospatial
         private void Primo_Scenario_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+           // parentForm.closeMessage();
         }
     }
 }

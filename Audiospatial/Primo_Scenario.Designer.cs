@@ -45,7 +45,7 @@
             this.labPrimoScenario.BackColor = System.Drawing.Color.Transparent;
             this.labPrimoScenario.Font = new System.Drawing.Font("Snap ITC", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labPrimoScenario.ForeColor = System.Drawing.Color.Orange;
-            this.labPrimoScenario.Location = new System.Drawing.Point(49, 0);
+            this.labPrimoScenario.Location = new System.Drawing.Point(244, 0);
             this.labPrimoScenario.Name = "labPrimoScenario";
             this.labPrimoScenario.Size = new System.Drawing.Size(920, 58);
             this.labPrimoScenario.TabIndex = 1;
@@ -105,7 +105,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(442, 436);
+            this.label3.Location = new System.Drawing.Point(616, 436);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(286, 34);
             this.label3.TabIndex = 6;
@@ -115,7 +115,7 @@
             // 
             this.Alarm.ErrorImage = null;
             this.Alarm.Image = global::Audiospatial.Properties.Resources.alarm;
-            this.Alarm.Location = new System.Drawing.Point(487, 498);
+            this.Alarm.Location = new System.Drawing.Point(652, 498);
             this.Alarm.Name = "Alarm";
             this.Alarm.Size = new System.Drawing.Size(176, 121);
             this.Alarm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -133,6 +133,7 @@
             this.Start.Size = new System.Drawing.Size(236, 57);
             this.Start.TabIndex = 8;
             this.Start.Text = "INIZIA!";
+            this.Start.Click += new System.EventHandler(this.Start_Click);
             // 
             // Primo_Scenario
             // 

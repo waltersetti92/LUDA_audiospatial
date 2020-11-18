@@ -28,8 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.initial1 = new Audiospatial.Initial();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
+            this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.SuspendLayout();
             // 
             // initial1
@@ -50,12 +52,22 @@
             this.activityUdaUC1.Size = new System.Drawing.Size(609, 309);
             this.activityUdaUC1.TabIndex = 1;
             // 
+            // primo_Scenario1
+            // 
+            this.primo_Scenario1.BackColor = System.Drawing.Color.Transparent;
+            this.primo_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("primo_Scenario1.BackgroundImage")));
+            this.primo_Scenario1.Location = new System.Drawing.Point(-6, -1);
+            this.primo_Scenario1.Name = "primo_Scenario1";
+            this.primo_Scenario1.Size = new System.Drawing.Size(808, 762);
+            this.primo_Scenario1.TabIndex = 2;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.primo_Scenario1);
             this.Controls.Add(this.activityUdaUC1);
             this.Controls.Add(this.initial1);
             this.Name = "Main";
@@ -70,6 +82,7 @@
 
         private Initial initial1;
         private ActivityUdaUC activityUdaUC1;
+        private Primo_Scenario primo_Scenario1;
     }
 }
 

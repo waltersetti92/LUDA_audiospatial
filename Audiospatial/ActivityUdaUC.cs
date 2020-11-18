@@ -48,6 +48,12 @@ namespace Audiospatial
             Visible = false;
             parentForm.home();
         }
+
+        private void btStart_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            parentForm.onStartActivity(((ComboBoxItem)cmbDifficulty.SelectedItem).Value, 0, cmbParticipants.SelectedIndex + 1, "1");
+        }
     }
     class ComboBoxItem
     {

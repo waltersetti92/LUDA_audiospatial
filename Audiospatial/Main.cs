@@ -36,10 +36,10 @@ namespace Audiospatial
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
             initial1.parentForm = this;
             activityUdaUC1.parentForm = this;
-
-           
+            primo_Scenario1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
+            primo_Scenario1.Visible = false;
             home();
         }
         public void Status_Changed(string k)
@@ -75,8 +75,23 @@ namespace Audiospatial
             Size size = this.Size;
             initial1.setPos(size.Width, size.Height);
             activityUdaUC1.setPos(size.Width, size.Height);
-
+            primo_Scenario1.setPos(size.Width, size.Height);
         }
+        public void onStartActivity(int level, int type, int num_participants, string group)
+        {
+            activityUdaUC1.Visible = false;
+            primo_Scenario1.Visible = true;
+
+            iDifficulty = level;
+
+           // if (Main.IS_DEBUG == true) debugInfoUC1.Visible = true;
+           // else debugInfoUC1.Visible = false;
+
+            //currUC = stanza11;
+
+            //activity.init(level, type, num_participants, group);
+        }
+
 
         private void initial1_Load(object sender, EventArgs e)
         {
