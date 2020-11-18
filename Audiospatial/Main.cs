@@ -36,6 +36,7 @@ namespace Audiospatial
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
             initial1.parentForm = this;
             activityUdaUC1.parentForm = this;
+
            
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
