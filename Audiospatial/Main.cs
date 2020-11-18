@@ -37,9 +37,11 @@ namespace Audiospatial
             initial1.parentForm = this;
             activityUdaUC1.parentForm = this;
             primo_Scenario1.parentForm = this;
+            debugInfo1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
+            debugInfo1.Visible = false;
             home();
         }
         public void Status_Changed(string k)
@@ -84,14 +86,21 @@ namespace Audiospatial
 
             iDifficulty = level;
 
-           // if (Main.IS_DEBUG == true) debugInfoUC1.Visible = true;
-           // else debugInfoUC1.Visible = false;
+           if (Main.IS_DEBUG == true) debugInfo1.Visible = true;
+           else debugInfo1.Visible = false;
 
             //currUC = stanza11;
 
             //activity.init(level, type, num_participants, group);
         }
 
+        public void playbackResourceAudio(string audioname)
+        {
+
+            string s = resourcesPath + "\\" + audioname + ".wav";
+            player = new SoundPlayer(s);
+            player.Play();
+        }
 
         private void initial1_Load(object sender, EventArgs e)
         {

@@ -121,6 +121,7 @@
             this.Alarm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Alarm.TabIndex = 7;
             this.Alarm.TabStop = false;
+            this.Alarm.Click += new System.EventHandler(this.Alarm_Click_1);
             // 
             // Start
             // 

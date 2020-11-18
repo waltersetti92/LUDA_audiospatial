@@ -57,5 +57,10 @@ namespace Audiospatial
         {
            // parentForm.closeMessage();
         }
+
+        private void Alarm_Click_1(object sender, EventArgs e)
+        {
+            parentForm.playbackResourceAudio("Alarm_sound");
+        }
     }
 }
