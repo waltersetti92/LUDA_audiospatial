@@ -80,6 +80,7 @@
             this.btExit.TabIndex = 20;
             this.btExit.Text = "ESCI";
             this.btExit.UseVisualStyleBackColor = true;
+            this.btExit.Click += new System.EventHandler(this.btExit_Click);
             // 
             // cmbParticipants
             // 

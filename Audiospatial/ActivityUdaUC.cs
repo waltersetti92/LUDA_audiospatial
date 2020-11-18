@@ -42,6 +42,12 @@ namespace Audiospatial
         {
             Location = new Point(w / 2 - Width / 2, h / 2 - Height / 2);
         }
+
+        private void btExit_Click(object sender, EventArgs e)
+        {
+            Visible = false;
+            parentForm.home();
+        }
     }
     class ComboBoxItem
     {
