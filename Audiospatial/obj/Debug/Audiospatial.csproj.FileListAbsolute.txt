@@ -54,7 +54,6 @@ C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\bin\Debug\System.Text
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\bin\Debug\System.Text.Json.xml
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\bin\Debug\System.ValueTuple.xml
-C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.csprojAssemblyReference.cache
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.ActivityUdaUC.resources
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.Initial.resources
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.Main.resources
@@ -65,3 +64,4 @@ C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatia
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.exe
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.pdb
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.Primo_Scenario.resources
+C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.debugInfo.resources

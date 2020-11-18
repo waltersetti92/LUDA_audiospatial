@@ -84,6 +84,12 @@
       <DependentUpon>ActivityUdaUC.cs</DependentUpon>
     </Compile>
     <Compile Include="Business_Logic.cs" />
+    <Compile Include="debugInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="debugInfo.Designer.cs">
+      <DependentUpon>debugInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Initial.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -109,6 +115,9 @@
     <Compile Include="uda_server_communication.cs" />
     <EmbeddedResource Include="ActivityUdaUC.resx">
       <DependentUpon>ActivityUdaUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="debugInfo.resx">
+      <DependentUpon>debugInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Initial.resx">
       <DependentUpon>Initial.cs</DependentUpon>
