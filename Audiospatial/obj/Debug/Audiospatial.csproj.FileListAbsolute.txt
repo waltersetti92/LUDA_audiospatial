@@ -64,3 +64,4 @@ C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatia
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.csproj.CopyComplete
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.exe
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.pdb
+C:\Users\Luigi\Source\Repos\LUDA_audiospatial\Audiospatial\obj\Debug\Audiospatial.Primo_Scenario.resources

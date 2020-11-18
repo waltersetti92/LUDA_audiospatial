@@ -36,6 +36,7 @@ namespace Audiospatial
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
             initial1.parentForm = this;
             activityUdaUC1.parentForm = this;
+           
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             home();
@@ -66,8 +67,6 @@ namespace Audiospatial
         {
             initial1.Visible = false;
             activityUdaUC1.Visible = true;
-
-            //stanza11.Visible = false;
             currUC = activityUdaUC1;
         }
         private void Main_Load(object sender, EventArgs e)
