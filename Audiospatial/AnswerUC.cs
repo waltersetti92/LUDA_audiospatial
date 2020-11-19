@@ -50,5 +50,11 @@ namespace Audiospatial
         {
 
         }
+
+        private void btAnswer_Click(object sender, EventArgs e)
+        {
+            if (txtResult.Text.Length > 0)
+                parentForm.onAnswer(txtResult.Text);
+        }
     }
 }

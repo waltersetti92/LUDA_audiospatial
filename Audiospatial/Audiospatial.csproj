@@ -115,6 +115,12 @@
     <Compile Include="Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MessageUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageUC.Designer.cs">
+      <DependentUpon>MessageUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Primo_Scenario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -143,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageUC.resx">
+      <DependentUpon>MessageUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Primo_Scenario.resx">
       <DependentUpon>Primo_Scenario.cs</DependentUpon>

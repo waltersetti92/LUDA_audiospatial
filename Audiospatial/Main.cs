@@ -17,6 +17,7 @@ namespace Audiospatial
         public static readonly string resourcesPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\resources";
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
+        private const string background_image_stanza = "bed4.jpg";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -38,16 +39,18 @@ namespace Audiospatial
             debugInfo1.parentForm = this;
             answerUC1.parentForm = this;
             activity_Stanza1.parentForm = this;
+            messageUC1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
             debugInfo1.Visible = false;
             answerUC1.Visible = false;
             activity_Stanza1.Visible = false;
+            messageUC1.Visible = false;
             home();
-            BackgroundImageLayout = ImageLayout.Stretch;
-            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
-            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
+           BackgroundImageLayout = ImageLayout.Stretch;
+           BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
+
             activitiesList = readActivitiesList();
             activity = new ActivityMathSpatialAudio(activitiesList, this, speakers, activity_Stanza1, debugInfo1);
         }
@@ -77,6 +80,8 @@ namespace Audiospatial
 
             });
         }
+        
+        
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
@@ -97,6 +102,7 @@ namespace Audiospatial
             primo_Scenario1.setPos(size.Width, size.Height);
             answerUC1.setPos(size.Width, size.Height);
             activity_Stanza1.setPos(size.Width, size.Height);
+            messageUC1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -110,18 +116,14 @@ namespace Audiospatial
 
             currUC = activity_Stanza1;
 
-             activity.init(level, type, num_participants, group);
+            activity.init(level, type, num_participants, group);
         }
         public void closeMessage()
         {
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
             primo_Scenario1.Visible = false;
-            currUC.Visible = true;
-            string message = "Do you want to close this window?";
-            string title = "Close Window";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result = MessageBox.Show(message, title, buttons);
-            if (result == DialogResult.Yes)
-                this.Close();
+            currUC.Visible = true;           
             message_callback?.Invoke();
         }
         public void onAnswer(string result)
@@ -137,7 +139,7 @@ namespace Audiospatial
         public void onEndActivities()
         {
             currUC.Visible = false;
-            //ucMessage.setMessage("Complimenti !!! avete finito la vostra L'UDA !!!", "continua");
+            messageUC1.setMessage("Complimenti !!! avete finito la vostra L'UDA !!!", "continua");
             message_callback = home;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)

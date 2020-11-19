@@ -49,11 +49,13 @@
             this.btAnswer.TabIndex = 10;
             this.btAnswer.Text = "RISPONDI";
             this.btAnswer.UseVisualStyleBackColor = true;
+            this.btAnswer.Click += new System.EventHandler(this.btAnswer_Click);
             // 
             // AnswerUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.btAnswer);
             this.Controls.Add(this.txtResult);
             this.Name = "AnswerUC";

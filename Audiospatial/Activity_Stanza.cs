@@ -27,12 +27,15 @@ namespace Audiospatial
 
         private string currStartingNumber = "";
         private string currResult = "";
+        private Main mn;
         public Activity_Stanza()
         {
-            InitializeComponent();
-            this.BackgroundImage = Properties.Resources.bed4;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            //this.BackColor = Color.Transparent;
+            InitializeComponent();          
+            //this.BackgroundImage = Properties.Resources.bed4;
+            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            SetStyle(ControlStyles.Opaque, true);
+            this.BackColor = Color.Transparent;
             resetOperations();
         }
         private void resetOperations()
@@ -42,6 +45,8 @@ namespace Audiospatial
             pbEast.Visible = false;
             pbWest.Visible = false;
         }
+
+        // GUI CALLS
 
         public void applyActivity(SingleActivity act, int type, debugInfo debug)
         {
@@ -69,7 +74,7 @@ namespace Audiospatial
         {
             if (number == -1) return "";
 
-            return number.ToString();
+          return number.ToString();
         }
 
         // after new operand is going to be given
@@ -134,6 +139,8 @@ namespace Audiospatial
 
             return str;
         }
+
+
         public void setPos(int w, int h)
         {
             int border = 100;
@@ -148,7 +155,6 @@ namespace Audiospatial
             pbEast.Location = new Point(w - 3 * border, h / 2 + border);
             pbWest.Location = new Point(2 * border, h / 2 + border);
         }
-
         private void Activity_Stanza_Load(object sender, EventArgs e)
         {
 

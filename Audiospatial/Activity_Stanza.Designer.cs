@@ -63,7 +63,7 @@
             // pbEast
             // 
             this.pbEast.BackColor = System.Drawing.Color.Transparent;
-            this.pbEast.Location = new System.Drawing.Point(503, 166);
+            this.pbEast.Location = new System.Drawing.Point(594, 155);
             this.pbEast.Name = "pbEast";
             this.pbEast.Size = new System.Drawing.Size(125, 125);
             this.pbEast.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -76,7 +76,7 @@
             this.labCenter.AutoSize = true;
             this.labCenter.BackColor = System.Drawing.Color.Transparent;
             this.labCenter.Font = new System.Drawing.Font("Comic Sans MS", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCenter.Location = new System.Drawing.Point(226, 197);
+            this.labCenter.Location = new System.Drawing.Point(255, 299);
             this.labCenter.Name = "labCenter";
             this.labCenter.Size = new System.Drawing.Size(163, 223);
             this.labCenter.TabIndex = 23;
@@ -89,7 +89,7 @@
             this.labTimeCounter.AutoSize = true;
             this.labTimeCounter.BackColor = System.Drawing.Color.Transparent;
             this.labTimeCounter.Font = new System.Drawing.Font("Comic Sans MS", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labTimeCounter.Location = new System.Drawing.Point(524, 22);
+            this.labTimeCounter.Location = new System.Drawing.Point(544, -2);
             this.labTimeCounter.Name = "labTimeCounter";
             this.labTimeCounter.Size = new System.Drawing.Size(95, 130);
             this.labTimeCounter.TabIndex = 24;
@@ -100,7 +100,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Audiospatial.Properties.Resources.bed4;
             this.Controls.Add(this.labTimeCounter);
             this.Controls.Add(this.labCenter);
             this.Controls.Add(this.pbEast);

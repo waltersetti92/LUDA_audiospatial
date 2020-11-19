@@ -29,13 +29,41 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.messageUC1 = new Audiospatial.MessageUC();
+            this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
+            this.answerUC1 = new Audiospatial.AnswerUC();
             this.debugInfo1 = new Audiospatial.debugInfo();
             this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
-            this.answerUC1 = new Audiospatial.AnswerUC();
-            this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
             this.SuspendLayout();
+            // 
+            // messageUC1
+            // 
+            this.messageUC1.BackColor = System.Drawing.Color.Transparent;
+            this.messageUC1.Location = new System.Drawing.Point(7, 8);
+            this.messageUC1.Name = "messageUC1";
+            this.messageUC1.parentForm = null;
+            this.messageUC1.Size = new System.Drawing.Size(602, 144);
+            this.messageUC1.TabIndex = 6;
+            // 
+            // activity_Stanza1
+            // 
+            this.activity_Stanza1.BackColor = System.Drawing.Color.Transparent;
+            this.activity_Stanza1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.activity_Stanza1.Location = new System.Drawing.Point(-6, -1);
+            this.activity_Stanza1.Name = "activity_Stanza1";
+            this.activity_Stanza1.parentForm = null;
+            this.activity_Stanza1.Size = new System.Drawing.Size(694, 405);
+            this.activity_Stanza1.TabIndex = 5;
+            // 
+            // answerUC1
+            // 
+            this.answerUC1.Location = new System.Drawing.Point(-6, -1);
+            this.answerUC1.Name = "answerUC1";
+            this.answerUC1.parentForm = null;
+            this.answerUC1.Size = new System.Drawing.Size(451, 140);
+            this.answerUC1.TabIndex = 4;
             // 
             // debugInfo1
             // 
@@ -75,30 +103,13 @@
             this.initial1.TabIndex = 0;
             this.initial1.Load += new System.EventHandler(this.initial1_Load);
             // 
-            // answerUC1
-            // 
-            this.answerUC1.Location = new System.Drawing.Point(-6, -1);
-            this.answerUC1.Name = "answerUC1";
-            this.answerUC1.parentForm = null;
-            this.answerUC1.Size = new System.Drawing.Size(451, 140);
-            this.answerUC1.TabIndex = 4;
-            // 
-            // activity_Stanza1
-            // 
-            this.activity_Stanza1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("activity_Stanza1.BackgroundImage")));
-            this.activity_Stanza1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activity_Stanza1.Location = new System.Drawing.Point(-6, -1);
-            this.activity_Stanza1.Name = "activity_Stanza1";
-            this.activity_Stanza1.parentForm = null;
-            this.activity_Stanza1.Size = new System.Drawing.Size(694, 405);
-            this.activity_Stanza1.TabIndex = 5;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.messageUC1);
             this.Controls.Add(this.activity_Stanza1);
             this.Controls.Add(this.answerUC1);
             this.Controls.Add(this.debugInfo1);
@@ -121,6 +132,7 @@
         private debugInfo debugInfo1;
         private AnswerUC answerUC1;
         private Activity_Stanza activity_Stanza1;
+        private MessageUC messageUC1;
     }
 }
 

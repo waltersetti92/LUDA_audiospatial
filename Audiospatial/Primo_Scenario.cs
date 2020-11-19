@@ -33,7 +33,7 @@ namespace Audiospatial
             Visible = true;
             if (bt_text.Length > 0)
             {
-                Start.Text = bt_text;
+   
                 Start.Visible = true;
                 Start.Select();
             }
