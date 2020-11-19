@@ -100,7 +100,7 @@ namespace Audiospatial
 
             if (currParticipant == iParticipants)
             {
-                form.onEndActivities(1);     // LUDA FINISHED !!!!
+                form.onEndActivities();     // LUDA FINISHED !!!!
                 return;
             }
             else if (currParticipant == 0)
@@ -222,7 +222,7 @@ namespace Audiospatial
             aTimer.Tag = TAG_TIMER;
             aTimer.Start();
             elapsedTime = 0;
-            activity.setCountDown((duration - elapsedTime));
+            activity.setCountDown((duration-elapsedTime)); //duration-elapsedTime
         }
 
         // callback of every timer

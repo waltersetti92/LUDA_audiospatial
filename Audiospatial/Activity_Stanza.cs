@@ -31,8 +31,6 @@ namespace Audiospatial
         public Activity_Stanza()
         {
             InitializeComponent();          
-            //this.BackgroundImage = Properties.Resources.bed4;
-            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);
             SetStyle(ControlStyles.Opaque, true);
             this.BackColor = Color.Transparent;

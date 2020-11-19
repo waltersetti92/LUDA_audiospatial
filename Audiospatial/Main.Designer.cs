@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
             this.messageUC1 = new Audiospatial.MessageUC();
             this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
             this.answerUC1 = new Audiospatial.AnswerUC();
@@ -36,8 +37,17 @@
             this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
-            this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
             this.SuspendLayout();
+            // 
+            // secondo_Scenario1
+            // 
+            this.secondo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.traffic3;
+            this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -4);
+            this.secondo_Scenario1.Name = "secondo_Scenario1";
+            this.secondo_Scenario1.parentForm = null;
+            this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
+            this.secondo_Scenario1.TabIndex = 7;
             // 
             // messageUC1
             // 
@@ -104,16 +114,6 @@
             this.initial1.Size = new System.Drawing.Size(785, 328);
             this.initial1.TabIndex = 0;
             this.initial1.Load += new System.EventHandler(this.initial1_Load);
-            // 
-            // secondo_Scenario1
-            // 
-            this.secondo_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("secondo_Scenario1.BackgroundImage")));
-            this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -4);
-            this.secondo_Scenario1.Name = "secondo_Scenario1";
-            this.secondo_Scenario1.parentForm = null;
-            this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
-            this.secondo_Scenario1.TabIndex = 7;
             // 
             // Main
             // 

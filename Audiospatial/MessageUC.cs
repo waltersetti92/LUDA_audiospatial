@@ -13,6 +13,7 @@ namespace Audiospatial
     public partial class MessageUC : UserControl
     {
         public Main parentForm { get; set; }
+        public int index;
         public MessageUC()
         {
             InitializeComponent();
@@ -20,7 +21,7 @@ namespace Audiospatial
             SetStyle(ControlStyles.Opaque, true);
             this.BackColor = Color.Transparent;
         }
-        public void setMessage(string msg, string bt_text)
+        public int setMessage(string msg, string bt_text, int i)
         {
             Visible = true;
             label.Text = msg;
@@ -38,6 +39,8 @@ namespace Audiospatial
                 btClose.Text = "";
                 btClose.Visible = false;
             }
+            index = i;
+            return index;
         }
         public void setPos(int w, int h)
         {
@@ -52,12 +55,17 @@ namespace Audiospatial
         }
         private void onKeyPress(object sender, KeyPressEventArgs e)
         {
+
             parentForm.closeMessage();
         }
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            parentForm.closeMessage();
+            if (index == 1)
+            {
+                parentForm.closeMessage1();
+            }
+           
         }
 
         private void MessageUC_Load(object sender, EventArgs e)

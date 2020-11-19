@@ -22,14 +22,18 @@ namespace Audiospatial
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
         private UserControl currUC = null;
+        private UserControl currUC1 = null;
         public SoundPlayer player = null;
         public static readonly int N_SPEAKERS = 3;
         public static readonly bool IS_DEBUG = false;
+        public int counter_form;
+
         private int iDifficulty = 0;
         ResumeFromMessage message_callback = null;
         public Speakers speakers = null;
         public Main()
         {
+            counter_form = 1;
             speakers = new Speakers();
             Business_Logic BL = new Business_Logic(this);
             InitializeComponent();       //commit1                  
@@ -94,7 +98,8 @@ namespace Audiospatial
         {
             if (currUC != null) currUC.Visible = false;
             secondo_Scenario1.Show();
-            currUC = secondo_Scenario1;
+            currUC1 = secondo_Scenario1;
+            counter_form++;
         }
         public void onStart()
         {
@@ -124,6 +129,7 @@ namespace Audiospatial
            else debugInfo1.Visible = false;
 
             currUC = activity_Stanza1;
+            currUC1 = secondo_Scenario1;
 
             activity.init(level, type, num_participants, group);
         }
@@ -135,6 +141,13 @@ namespace Audiospatial
             currUC.Visible = true;           
             message_callback?.Invoke();
         }
+        public void closeMessage1()
+        {
+            messageUC1.Visible = false;
+            secondo_Scenario1.Visible = true;
+            message_callback?.Invoke();
+            counter_form++;
+        }
         public void onAnswer(string result)
         {
             answerUC1.Visible = false;
@@ -145,15 +158,11 @@ namespace Audiospatial
             activity.nextOperand();
             currUC = activity_Stanza1;
         }
-        public void onEndActivities(int index)
+        public void onEndActivities()
         {
             currUC.Visible = false;
-            if (index == 1)
-            {
-                messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua");
-                message_callback = traffic;
-            }
-           
+            messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua",counter_form);
+            message_callback = traffic;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
         {
