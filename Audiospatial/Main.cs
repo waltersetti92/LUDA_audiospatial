@@ -138,7 +138,8 @@ namespace Audiospatial
             BackgroundImageLayout = ImageLayout.Stretch;
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
             primo_Scenario1.Visible = false;
-            currUC.Visible = true;           
+            currUC.Visible = true;
+            //secondo_Scenario1.Visible = true;
             message_callback?.Invoke();
         }
         public void closeMessage1()
