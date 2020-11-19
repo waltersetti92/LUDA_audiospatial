@@ -33,8 +33,8 @@ namespace Audiospatial
         {
             if (e.KeyChar == '\r')
             {
-                //if (txtResult.Text.Length > 0)
-                    //parentForm.onAnswer(txtResult.Text);
+                if (txtResult.Text.Length > 0)
+                    parentForm.onAnswer(txtResult.Text);
             }
         }
 

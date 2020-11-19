@@ -40,6 +40,7 @@
             // 
             // pbWest
             // 
+            this.pbWest.BackColor = System.Drawing.Color.Transparent;
             this.pbWest.Location = new System.Drawing.Point(3, 166);
             this.pbWest.Name = "pbWest";
             this.pbWest.Size = new System.Drawing.Size(125, 125);
@@ -50,6 +51,7 @@
             // 
             // pbNorth
             // 
+            this.pbNorth.BackColor = System.Drawing.Color.Transparent;
             this.pbNorth.Location = new System.Drawing.Point(274, 3);
             this.pbNorth.Name = "pbNorth";
             this.pbNorth.Size = new System.Drawing.Size(125, 125);
@@ -60,6 +62,7 @@
             // 
             // pbEast
             // 
+            this.pbEast.BackColor = System.Drawing.Color.Transparent;
             this.pbEast.Location = new System.Drawing.Point(503, 166);
             this.pbEast.Name = "pbEast";
             this.pbEast.Size = new System.Drawing.Size(125, 125);
@@ -71,17 +74,20 @@
             // labCenter
             // 
             this.labCenter.AutoSize = true;
+            this.labCenter.BackColor = System.Drawing.Color.Transparent;
             this.labCenter.Font = new System.Drawing.Font("Comic Sans MS", 120F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labCenter.Location = new System.Drawing.Point(254, 182);
+            this.labCenter.Location = new System.Drawing.Point(226, 197);
             this.labCenter.Name = "labCenter";
             this.labCenter.Size = new System.Drawing.Size(163, 223);
             this.labCenter.TabIndex = 23;
             this.labCenter.Text = ".";
             this.labCenter.Visible = false;
+            this.labCenter.Click += new System.EventHandler(this.labCenter_Click);
             // 
             // labTimeCounter
             // 
             this.labTimeCounter.AutoSize = true;
+            this.labTimeCounter.BackColor = System.Drawing.Color.Transparent;
             this.labTimeCounter.Font = new System.Drawing.Font("Comic Sans MS", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labTimeCounter.Location = new System.Drawing.Point(524, 22);
             this.labTimeCounter.Name = "labTimeCounter";
@@ -101,7 +107,7 @@
             this.Controls.Add(this.pbNorth);
             this.Controls.Add(this.pbWest);
             this.Name = "Activity_Stanza";
-            this.Size = new System.Drawing.Size(694, 405);
+            this.Size = new System.Drawing.Size(758, 522);
             this.Load += new System.EventHandler(this.Activity_Stanza_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbWest)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNorth)).EndInit();

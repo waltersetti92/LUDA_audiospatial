@@ -55,7 +55,7 @@ namespace Audiospatial
 
         private void Start_Click(object sender, EventArgs e)
         {
-           // parentForm.closeMessage();
+           parentForm.closeMessage();
         }
 
         private void Alarm_Click_1(object sender, EventArgs e)

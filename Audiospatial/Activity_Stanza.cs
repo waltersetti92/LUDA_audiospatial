@@ -153,5 +153,10 @@ namespace Audiospatial
         {
 
         }
+
+        private void labCenter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

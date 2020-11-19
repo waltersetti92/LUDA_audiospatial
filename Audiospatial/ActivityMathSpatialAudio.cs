@@ -12,9 +12,11 @@ namespace Audiospatial
     class ActivityMathSpatialAudio
     {
         private readonly Main form;
+        private readonly Activity_Stanza activity;
         private readonly Speakers speakers;
         private readonly debugInfo debug;
         private readonly Activities available_activities;
+
         private SingleActivity currActivity;
         private SingleActivity[] chosenActivities;
 
@@ -24,6 +26,7 @@ namespace Audiospatial
         private string group = "";
 
         private ActivityResult results;
+
         private static readonly string[] speaker_labels = new string[] { "02", "03", "04" };     // west, north, east
 
         private static readonly string[] operations_symbols = new string[] { "dog", "cat", "lion", "chewbacca" };
@@ -36,6 +39,7 @@ namespace Audiospatial
         private const string TAG_TIMER = "timer";
 
         public static int N_TYPE_SPATIAL = 0;
+        public static int N_TYPE_ASSOCIATIVE = 1;
 
         private const int N_OP_PLUS = 0;
         private const int N_OP_SUBTRACT = 1;
@@ -62,9 +66,254 @@ namespace Audiospatial
         private int currSound = 0;    // num of sound reproduced [1->currOperand]
 
         private int elapsedTime = 0;
-        
+        public ActivityMathSpatialAudio(Activities activities, Main form, Speakers speakers, Activity_Stanza activity, debugInfo debug)
+        {
+            this.available_activities = activities;
+            this.form = form;
+            this.speakers = speakers;
+            this.activity = activity;
+            this.debug = debug;
+        }
+        public void init(int diff, int type, int num_participants, string group)
+        {
+            iDifficultyLevel = diff;
+            iType = type;
+            iParticipants = num_participants;
+            this.group = group;
 
+            currParticipant = -1;
+
+            int num_available_operations = available_activities.items[diff].Count;
+            int[] selected_ops = pickRandomSubsequence(num_participants, num_available_operations);
+
+            // select num partipants random activities
+            chosenActivities = new SingleActivity[num_participants];
+            for (int a = 0; a < num_participants; a++)
+                chosenActivities[a] = available_activities.items[diff][selected_ops[a]];
+
+            nextParticipant();
+        }
+
+        private void nextParticipant()
+        {
+            currParticipant++;
+
+            if (currParticipant == iParticipants)
+            {
+                form.onEndActivities();     // LUDA FINISHED !!!!
+                return;
+            }
+            else if (currParticipant == 0)
+                onEndParticipant();         // FIRST PARTICIPANT !!!!
+            else
+                form.showMessage("GRAZIE DI AVER PARTECIPATO !!! tocca al tuo compagno", "comincia", onEndParticipant);
+        }
+
+        private void onEndParticipant()
+        {
+
+            if (iType == N_TYPE_SPATIAL)
+                form.showMessage("BENVENUTO !!! SEI PRONTO AD IMPARARE LA MATEMATICA !", "comincia", resumeParticipant);
+            //else
+            //resumeParticipant();
+            //form.showAssSoundInfo(iDifficultyLevel, resumeParticipant);
+        }
+
+        public void resumeParticipant()
+        {
+
+            form.Refresh();
+
+            currActivity = chosenActivities[currParticipant];
+            totOps = currActivity.speaker.Length;
+
+            initResultFile(iDifficultyLevel, iType, currParticipant, group, currActivity.id);
+            applyActivity(currActivity);
+
+            // start game
+            nextOperand();
+        }
+
+        private void applyActivity(SingleActivity act)
+        {
+            currOp = -1;
+            currResult = currActivity.start_number;
+            activity.applyActivity(act, iType, debug);
+
+            currOperationsLabels.Clear();
+            foreach (int op in currActivity.operations)
+                currOperationsLabels.Add(operations_labels[op]);    // contains the operators' labels of the three speakers
+
+            currOperationsSymbols.Clear();
+            foreach (int op in currActivity.operations)
+                currOperationsSymbols.Add(operations_symbols[op]);    // contains the operators' symbols used in the current SingleActivity
+        }
+
+        // the same participant starts a new operation
+        public void nextOperand()
+        {
+            currOp++;
+
+            if (currOp == totOps)
+            {
+                nextParticipant();
+                return;
+            }
+            int oldNumber = currResult;
+
+            currSpeaker = currActivity.speaker[currOp];     // 0-2
+            currOperand = currActivity.operands[currOp];    // 1-N
+
+            currOperator = currActivity.operations[currSpeaker];  // 0-3
+
+            switch (currOperator)
+            {
+                case N_OP_PLUS:
+                    currResult += currOperand;
+                    break;
+
+                case N_OP_SUBTRACT:
+                    currResult -= currOperand;
+                    break;
+
+                case N_OP_MULT:
+                    currResult *= currOperand;
+                    break;
+
+                case N_OP_DIVISION:
+                    currResult /= currOperand;
+                    break;
+            }
+
+            debug.nextOperand();                            // clear debug and visible true
+            activity.nextOperand(oldNumber, currResult);    // show past results (current starting number) and reset counter
+
+            Thread.Sleep(3000);
+
+            activity.setStartNumber(-1);                // ISSUE : cannot hide current starting number
+            debug.setDebugInfo(oldNumber.ToString(), currOperationsLabels[currSpeaker], currOperand.ToString(), currResult.ToString());
+
+            if (iType == N_TYPE_SPATIAL) playNsounds(speaker_labels[currSpeaker]);
+            else playNsounds(currOperationsSymbols[currSpeaker]);
+
+        }
+
+        //playback first sound and start timer
+        private void playNsounds(string source)
+        {
+            aTimer = new System.Windows.Forms.Timer();
+            aTimer.Tick += new EventHandler(TimerEventProcessor);
+
+            aTimer.Interval = sound_interval;
+            aTimer.Tag = TAG_SOUND;
+            aTimer.Start();
+            currSound = 1;
+            if (iType == N_TYPE_SPATIAL) speakers.startSpeaker(source);
+            else form.playbackResourceAudio(source);
+        }
+
+        // start countdown timer
+        private void StartTimer(int rate, int duration)
+        {
+            aTimer = new System.Windows.Forms.Timer();
+            aTimer.Tick += new EventHandler(TimerEventProcessor);
+
+            aTimer.Interval = rate * timer_interval;
+            aTimer.Tag = TAG_TIMER;
+            aTimer.Start();
+            elapsedTime = 0;
+            activity.setCountDown((duration - elapsedTime));
+        }
+
+        // callback of every timer
+        private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
+        {
+            aTimer.Stop();
+
+            switch (((System.Windows.Forms.Timer)(myObject)).Tag)
+            {
+                case TAG_SOUND:
+
+                    if (currSound < currOperand)
+                    {
+                        //SystemSounds.Exclamation.Play();
+                        if (iType == N_TYPE_SPATIAL) speakers.startSpeaker(speaker_labels[currSpeaker]);
+                        else form.playbackResourceAudio(currOperationsSymbols[currSpeaker]);
+
+                        currSound++;
+                        aTimer.Enabled = true;
+                    }
+                    else
+                        StartTimer(1, answerTime[iDifficultyLevel]);
+                    break;
+
+                case TAG_TIMER:
+
+                    elapsedTime++;
+                    if (elapsedTime > answerTime[iDifficultyLevel])
+                    {
+                        form.onCountDownEnd();
+                        activity.setCountDown(-1);
+                    }
+                    else
+                    {
+                        activity.setCountDown((answerTime[iDifficultyLevel] - elapsedTime));
+                        aTimer.Enabled = true;
+                    }
+                    break;
+            }
+        }
+
+        // calculate result and write to disk
+        public bool isCorrect(int res)
+        {
+            bool isCorrect = (res == currResult);
+            results.results[currOp] = isCorrect;
+
+            using (StreamWriter file = File.CreateText(Main.resultsDir + "\\" + currResultFile))
+            {
+                JsonSerializer serializer = new JsonSerializer();
+                serializer.Serialize(file, results);
+            }
+
+            return isCorrect;
+        }
+
+        // init result object and write it to disk
+        private void initResultFile(int diff, int type, int num_participants, string group, int activity_id)
+        {
+            results = new ActivityResult
+            {
+                participant_id = num_participants,
+                type = type,
+                group = group,
+                difficulty = diff,
+                date = DateTime.Now,
+                activity_id = activity_id,
+                results = new bool[currActivity.operands.Length]
+            };
+
+            currResultFile = results.getFileName();
+        }
+
+        public static int[] pickRandomSubsequence(int needed_numbers, int tot_numbers)
+        {
+            int[] array = new int[tot_numbers];
+            int[] out_array = new int[needed_numbers];
+
+            for (int n = 0; n < tot_numbers; n++) array[n] = n;
+            var rng = new Random();
+            rng.Shuffle(array);
+
+            for (int n = 0; n < needed_numbers; n++) out_array[n] = array[n];
+
+            return out_array;
+        }
     }
+
+
+
+}
     public class SingleActivity
     {
         public int id { get; set; }
@@ -100,4 +349,4 @@ namespace Audiospatial
         }
 
     }
-}
+
