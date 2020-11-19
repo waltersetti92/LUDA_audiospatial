@@ -34,6 +34,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Audiospatial.Properties.Resources.traffic;
             this.Name = "Secondo_Scenario";
             this.Size = new System.Drawing.Size(618, 331);
             this.Load += new System.EventHandler(this.Secondo_Scenario_Load);

@@ -36,6 +36,7 @@
             this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
+            this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
             this.SuspendLayout();
             // 
             // messageUC1
@@ -59,6 +60,7 @@
             // 
             // answerUC1
             // 
+            this.answerUC1.BackColor = System.Drawing.Color.Transparent;
             this.answerUC1.Location = new System.Drawing.Point(-6, -1);
             this.answerUC1.Name = "answerUC1";
             this.answerUC1.parentForm = null;
@@ -103,12 +105,23 @@
             this.initial1.TabIndex = 0;
             this.initial1.Load += new System.EventHandler(this.initial1_Load);
             // 
+            // secondo_Scenario1
+            // 
+            this.secondo_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("secondo_Scenario1.BackgroundImage")));
+            this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -4);
+            this.secondo_Scenario1.Name = "secondo_Scenario1";
+            this.secondo_Scenario1.parentForm = null;
+            this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
+            this.secondo_Scenario1.TabIndex = 7;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.secondo_Scenario1);
             this.Controls.Add(this.messageUC1);
             this.Controls.Add(this.activity_Stanza1);
             this.Controls.Add(this.answerUC1);
@@ -133,6 +146,7 @@
         private AnswerUC answerUC1;
         private Activity_Stanza activity_Stanza1;
         private MessageUC messageUC1;
+        private Secondo_Scenario secondo_Scenario1;
     }
 }
 

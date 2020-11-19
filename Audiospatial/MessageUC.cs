@@ -59,5 +59,10 @@ namespace Audiospatial
         {
             parentForm.closeMessage();
         }
+
+        private void MessageUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

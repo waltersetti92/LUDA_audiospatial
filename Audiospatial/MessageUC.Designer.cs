@@ -68,6 +68,7 @@
             this.Controls.Add(this.label);
             this.Name = "MessageUC";
             this.Size = new System.Drawing.Size(602, 144);
+            this.Load += new System.EventHandler(this.MessageUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

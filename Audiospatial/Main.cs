@@ -39,6 +39,7 @@ namespace Audiospatial
             debugInfo1.parentForm = this;
             answerUC1.parentForm = this;
             activity_Stanza1.parentForm = this;
+            secondo_Scenario1.parentForm = this;
             messageUC1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
@@ -47,6 +48,7 @@ namespace Audiospatial
             answerUC1.Visible = false;
             activity_Stanza1.Visible = false;
             messageUC1.Visible = false;
+            secondo_Scenario1.Visible = false;
             home();
            BackgroundImageLayout = ImageLayout.Stretch;
            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
@@ -88,6 +90,12 @@ namespace Audiospatial
             initial1.Show();
             currUC = initial1;
         }
+        public void traffic()
+        {
+            if (currUC != null) currUC.Visible = false;
+            secondo_Scenario1.Show();
+            currUC = secondo_Scenario1;
+        }
         public void onStart()
         {
             initial1.Visible = false;
@@ -103,6 +111,7 @@ namespace Audiospatial
             answerUC1.setPos(size.Width, size.Height);
             activity_Stanza1.setPos(size.Width, size.Height);
             messageUC1.setPos(size.Width, size.Height);
+            secondo_Scenario1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -136,11 +145,15 @@ namespace Audiospatial
             activity.nextOperand();
             currUC = activity_Stanza1;
         }
-        public void onEndActivities()
+        public void onEndActivities(int index)
         {
             currUC.Visible = false;
-            messageUC1.setMessage("Complimenti !!! avete finito la vostra L'UDA !!!", "continua");
-            message_callback = home;
+            if (index == 1)
+            {
+                messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua");
+                message_callback = traffic;
+            }
+           
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
         {

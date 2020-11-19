@@ -100,7 +100,7 @@ namespace Audiospatial
 
             if (currParticipant == iParticipants)
             {
-                form.onEndActivities();     // LUDA FINISHED !!!!
+                form.onEndActivities(1);     // LUDA FINISHED !!!!
                 return;
             }
             else if (currParticipant == 0)
