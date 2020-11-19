@@ -90,6 +90,12 @@
     <Compile Include="Activity_Stanza.Designer.cs">
       <DependentUpon>Activity_Stanza.cs</DependentUpon>
     </Compile>
+    <Compile Include="AnswerUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AnswerUC.Designer.cs">
+      <DependentUpon>AnswerUC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Business_Logic.cs" />
     <Compile Include="debugInfo.cs">
       <SubType>UserControl</SubType>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Activity_Stanza.resx">
       <DependentUpon>Activity_Stanza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AnswerUC.resx">
+      <DependentUpon>AnswerUC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="debugInfo.resx">
       <DependentUpon>debugInfo.cs</DependentUpon>

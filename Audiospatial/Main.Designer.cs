@@ -29,11 +29,21 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.debugInfo1 = new Audiospatial.debugInfo();
             this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
-            this.debugInfo1 = new Audiospatial.debugInfo();
+            this.answerUC1 = new Audiospatial.AnswerUC();
             this.SuspendLayout();
+            // 
+            // debugInfo1
+            // 
+            this.debugInfo1.BackColor = System.Drawing.Color.Transparent;
+            this.debugInfo1.Location = new System.Drawing.Point(5, 6);
+            this.debugInfo1.Name = "debugInfo1";
+            this.debugInfo1.parentForm = null;
+            this.debugInfo1.Size = new System.Drawing.Size(260, 40);
+            this.debugInfo1.TabIndex = 3;
             // 
             // primo_Scenario1
             // 
@@ -64,14 +74,13 @@
             this.initial1.TabIndex = 0;
             this.initial1.Load += new System.EventHandler(this.initial1_Load);
             // 
-            // debugInfo1
+            // answerUC1
             // 
-            this.debugInfo1.BackColor = System.Drawing.Color.Transparent;
-            this.debugInfo1.Location = new System.Drawing.Point(5, 6);
-            this.debugInfo1.Name = "debugInfo1";
-            this.debugInfo1.parentForm = null;
-            this.debugInfo1.Size = new System.Drawing.Size(260, 40);
-            this.debugInfo1.TabIndex = 3;
+            this.answerUC1.Location = new System.Drawing.Point(-6, -1);
+            this.answerUC1.Name = "answerUC1";
+            this.answerUC1.parentForm = null;
+            this.answerUC1.Size = new System.Drawing.Size(451, 140);
+            this.answerUC1.TabIndex = 4;
             // 
             // Main
             // 
@@ -79,6 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.answerUC1);
             this.Controls.Add(this.debugInfo1);
             this.Controls.Add(this.primo_Scenario1);
             this.Controls.Add(this.activityUdaUC1);
@@ -97,6 +107,7 @@
         private ActivityUdaUC activityUdaUC1;
         private Primo_Scenario primo_Scenario1;
         private debugInfo debugInfo1;
+        private AnswerUC answerUC1;
     }
 }
 

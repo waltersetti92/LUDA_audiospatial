@@ -38,10 +38,12 @@ namespace Audiospatial
             activityUdaUC1.parentForm = this;
             primo_Scenario1.parentForm = this;
             debugInfo1.parentForm = this;
+            answerUC1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
             debugInfo1.Visible = false;
+            answerUC1.Visible = false;
             home();
         }
         public void Status_Changed(string k)
@@ -78,6 +80,7 @@ namespace Audiospatial
             initial1.setPos(size.Width, size.Height);
             activityUdaUC1.setPos(size.Width, size.Height);
             primo_Scenario1.setPos(size.Width, size.Height);
+            answerUC1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
