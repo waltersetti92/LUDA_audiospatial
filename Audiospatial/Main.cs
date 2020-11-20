@@ -20,6 +20,7 @@ namespace Audiospatial
         private const string background_image_stanza = "bed4.jpg";
         private const string background_image_trafficjam = "traffic3.jpg";
         private const string background_image_plane = "plan2.jpg";
+        private const string background_image_tribal = "african.jpg";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -53,6 +54,7 @@ namespace Audiospatial
             secondo_Scenario1.parentForm = this;
             messageUC1.parentForm = this;
             terzo_Scenario1.parentForm = this;
+            quarto_Scenario1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
@@ -62,6 +64,7 @@ namespace Audiospatial
             messageUC1.Visible = false;
             secondo_Scenario1.Visible = false;
             terzo_Scenario1.Visible = false;
+            quarto_Scenario1.Visible = false;
             home();
            BackgroundImageLayout = ImageLayout.Stretch;
            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
@@ -118,8 +121,8 @@ namespace Audiospatial
             }
             else if (onactivity == 4)
             {
-                primo_Scenario1.Show();
-                currUC1 = primo_Scenario1;
+                quarto_Scenario1.Show();
+                currUC1 = quarto_Scenario1;
             }
 
         }
@@ -141,6 +144,7 @@ namespace Audiospatial
             messageUC1.setPos(size.Width, size.Height);
             secondo_Scenario1.setPos(size.Width, size.Height);
             terzo_Scenario1.setPos(size.Width, size.Height);
+            quarto_Scenario1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -158,6 +162,11 @@ namespace Audiospatial
             {
                 messageUC1.Visible = false;
                 terzo_Scenario1.Visible = true;
+            }
+            else if (onactivity == 4)
+            {
+                messageUC1.Visible = false;
+                quarto_Scenario1.Visible = true;
             }
 
             iDifficulty = level;
@@ -191,6 +200,12 @@ namespace Audiospatial
                 BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_plane);
                 terzo_Scenario1.Visible = false;
             }
+            else if (onactivity == 5)
+            {
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_tribal);
+                quarto_Scenario1.Visible = false;
+            }
             currUC.Visible = true;
             message_callback?.Invoke();
         }
@@ -219,6 +234,10 @@ namespace Audiospatial
             {
                 messageUC1.setMessage("Complimenti !!! Il viaggio è andato a buon fine! Possiamo iniziare l'esplorazione!", "continua");
             }
+            else if (onactivity == 5)
+            {
+                messageUC1.setMessage("Complimenti !!! La popolazione ti ha dato dei suggerimenti per trovare il tesoro! Andiamo!", "continua");
+            }
             message_callback = scenes;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
@@ -231,6 +250,8 @@ namespace Audiospatial
                 secondo_Scenario1.setMessage_ps(bt_text);
             else if (messaggio == 3)
                 terzo_Scenario1.setMessage_ps(bt_text);
+            else if (messaggio == 4)
+                quarto_Scenario1.setMessage_ps(bt_text);
         }
         public void onCountDownEnd()
         {

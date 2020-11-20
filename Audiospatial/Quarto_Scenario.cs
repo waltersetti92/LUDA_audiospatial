@@ -10,13 +10,14 @@ using System.Windows.Forms;
 
 namespace Audiospatial
 {
-    public partial class Terzo_Scenario : UserControl
+    public partial class Quarto_Scenario : UserControl
     {
         public Main parentForm { get; set; }
-        public Terzo_Scenario()
+        public Quarto_Scenario()
         {
+
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jungle;
+            this.BackgroundImage = Properties.Resources.tribal;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
         public void setPos(int w, int h)
@@ -26,6 +27,10 @@ namespace Audiospatial
             Location = new Point(offset, offset);
             Width = w - 1 * offset;
             Height = h - 1 * offset;
+
+        }
+        private void Quarto_Scenario_Load(object sender, EventArgs e)
+        {
 
         }
         public void setMessage_ps(string bt_text)
@@ -43,7 +48,7 @@ namespace Audiospatial
                 Start.Visible = false;
             }
         }
-        private void Terzo_Scenario_Load(object sender, EventArgs e)
+        private void labPrimoScenario_Click(object sender, EventArgs e)
         {
 
         }
@@ -55,7 +60,7 @@ namespace Audiospatial
 
         private void Alarm_Click(object sender, EventArgs e)
         {
-            parentForm.playbackResourceAudio("20");
+            parentForm.playbackResourceAudio("16");
         }
     }
 }

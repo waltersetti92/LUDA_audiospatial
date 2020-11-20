@@ -184,3 +184,4 @@ C:\Users\Luigi\Source\Repos\LUDA_audiospatial7\Audiospatial\obj\Debug\Audiospati
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial7\Audiospatial\obj\Debug\Audiospatial.exe
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial7\Audiospatial\obj\Debug\Audiospatial.pdb
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial7\Audiospatial\obj\Debug\Audiospatial.Terzo_Scenario.resources
+C:\Users\Luigi\Source\Repos\LUDA_audiospatial7\Audiospatial\obj\Debug\Audiospatial.Quarto_Scenario.resources
