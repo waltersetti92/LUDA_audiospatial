@@ -29,13 +29,14 @@ namespace Audiospatial
         public static readonly bool IS_DEBUG = false;
         public int counter_form;
         public int messaggio;
-        private int iDifficulty = 0;
+        public int participants;
+        public int iDifficulty = 0;
         ResumeFromMessage message_callback = null;
         public Speakers speakers = null;
         public Main()
         {
-            messaggio = 1;
-            counter_form = 1;
+            messaggio = 1;          
+            participants = 0;
             speakers = new Speakers();
             Business_Logic BL = new Business_Logic(this);
             InitializeComponent();       //commit1                  
@@ -126,6 +127,7 @@ namespace Audiospatial
             primo_Scenario1.Visible = true;
 
             iDifficulty = level;
+            participants = num_participants;
 
            if (Main.IS_DEBUG == true) debugInfo1.Visible = true;
            else debugInfo1.Visible = false;

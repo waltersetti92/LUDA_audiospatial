@@ -63,9 +63,8 @@ namespace Audiospatial
         private void btClose_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            parentForm.messaggio = 2;
-            parentForm.onStartActivity1(0, 0, 1, "1");
-         // parentForm.closeMessage1();
+            parentForm.messaggio = 2; // Questo per il messaggio da mandare in show message
+            parentForm.onStartActivity1(parentForm.iDifficulty, 0,parentForm.participants, "1");
 
         }
 
