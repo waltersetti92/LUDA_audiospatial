@@ -28,7 +28,21 @@ namespace Audiospatial
             Height = h - 1 * offset;
 
         }
+        public void setMessage_ps(string bt_text)
+        {
+            Visible = true;
+            if (bt_text.Length > 0)
+            {
 
+                Start.Visible = true;
+                Start.Select();
+            }
+            else
+            {
+                Start.Text = "";
+                Start.Visible = false;
+            }
+        }
         private void Secondo_Scenario_Load(object sender, EventArgs e)
         {
 
@@ -37,6 +51,11 @@ namespace Audiospatial
         private void Alarm_Click(object sender, EventArgs e)
         {
             parentForm.playbackResourceAudio("10");
+        }
+
+        private void Start_Click(object sender, EventArgs e)
+        {
+            parentForm.closeMessage2();
         }
     }
 }

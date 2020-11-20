@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Alarm = new System.Windows.Forms.PictureBox();
+            this.Start = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Alarm)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,7 +43,7 @@
             this.labPrimoScenario.AutoSize = true;
             this.labPrimoScenario.BackColor = System.Drawing.Color.Transparent;
             this.labPrimoScenario.Font = new System.Drawing.Font("Snap ITC", 33.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPrimoScenario.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.labPrimoScenario.ForeColor = System.Drawing.Color.MediumBlue;
             this.labPrimoScenario.Location = new System.Drawing.Point(316, 16);
             this.labPrimoScenario.Name = "labPrimoScenario";
             this.labPrimoScenario.Size = new System.Drawing.Size(621, 58);
@@ -110,11 +111,25 @@
             this.Alarm.TabStop = false;
             this.Alarm.Click += new System.EventHandler(this.Alarm_Click);
             // 
+            // Start
+            // 
+            this.Start.AutoSize = true;
+            this.Start.BackColor = System.Drawing.Color.Transparent;
+            this.Start.Font = new System.Drawing.Font("Snap ITC", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start.ForeColor = System.Drawing.Color.MediumBlue;
+            this.Start.Location = new System.Drawing.Point(610, 576);
+            this.Start.Name = "Start";
+            this.Start.Size = new System.Drawing.Size(236, 57);
+            this.Start.TabIndex = 9;
+            this.Start.Text = "INIZIA!";
+            this.Start.Click += new System.EventHandler(this.Start_Click);
+            // 
             // Secondo_Scenario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Audiospatial.Properties.Resources.traffic2;
+            this.Controls.Add(this.Start);
             this.Controls.Add(this.Alarm);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
@@ -122,7 +137,7 @@
             this.Controls.Add(this.labIndicazioni1);
             this.Controls.Add(this.labPrimoScenario);
             this.Name = "Secondo_Scenario";
-            this.Size = new System.Drawing.Size(713, 483);
+            this.Size = new System.Drawing.Size(827, 646);
             this.Load += new System.EventHandler(this.Secondo_Scenario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Alarm)).EndInit();
             this.ResumeLayout(false);
@@ -138,5 +153,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox Alarm;
+        private System.Windows.Forms.Label Start;
     }
 }

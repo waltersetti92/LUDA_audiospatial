@@ -18,6 +18,7 @@ namespace Audiospatial
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
         private const string background_image_stanza = "bed4.jpg";
+        private const string background_image_trafficjam = "traffic3.jpg";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -27,12 +28,13 @@ namespace Audiospatial
         public static readonly int N_SPEAKERS = 3;
         public static readonly bool IS_DEBUG = false;
         public int counter_form;
-
+        public int messaggio;
         private int iDifficulty = 0;
         ResumeFromMessage message_callback = null;
         public Speakers speakers = null;
         public Main()
         {
+            messaggio = 1;
             counter_form = 1;
             speakers = new Speakers();
             Business_Logic BL = new Business_Logic(this);
@@ -139,9 +141,17 @@ namespace Audiospatial
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
             primo_Scenario1.Visible = false;
             currUC.Visible = true;
-             secondo_Scenario1.Visible = true;
             message_callback?.Invoke();
         }
+        public void closeMessage2()
+        {
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_trafficjam);
+            secondo_Scenario1.Visible = false;
+            currUC.Visible = true;
+            message_callback?.Invoke();
+        }
+
         public void onStartActivity1(int level, int type, int num_participants, string group)
         {
             messageUC1.Visible = false;
@@ -182,7 +192,10 @@ namespace Audiospatial
         {
             currUC.Visible = false;
             message_callback = clb;
-            primo_Scenario1.setMessage_ps(bt_text);
+            if (messaggio == 1)
+                primo_Scenario1.setMessage_ps(bt_text);
+            else
+                secondo_Scenario1.setMessage_ps(bt_text);
         }
         public void onCountDownEnd()
         {
