@@ -103,6 +103,16 @@ namespace Audiospatial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cartoon_Lion {
+            get {
+                object obj = ResourceManager.GetObject("Cartoon-Lion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap drums {
             get {
                 object obj = ResourceManager.GetObject("drums", resourceCulture);
@@ -116,6 +126,16 @@ namespace Audiospatial.Properties {
         internal static System.Drawing.Bitmap jungle {
             get {
                 object obj = ResourceManager.GetObject("jungle", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lion {
+            get {
+                object obj = ResourceManager.GetObject("lion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

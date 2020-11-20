@@ -135,6 +135,12 @@
     <Compile Include="Quarto_Scenario.Designer.cs">
       <DependentUpon>Quarto_Scenario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quinto_Scenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quinto_Scenario.Designer.cs">
+      <DependentUpon>Quinto_Scenario.cs</DependentUpon>
+    </Compile>
     <Compile Include="RandomTools.cs" />
     <Compile Include="Secondo_Scenario.cs">
       <SubType>UserControl</SubType>
@@ -186,6 +192,9 @@
     </Compile>
     <EmbeddedResource Include="Quarto_Scenario.resx">
       <DependentUpon>Quarto_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quinto_Scenario.resx">
+      <DependentUpon>Quinto_Scenario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secondo_Scenario.resx">
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
@@ -248,6 +257,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Resources\tribal4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\lion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\Cartoon-Lion.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
