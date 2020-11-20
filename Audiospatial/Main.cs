@@ -116,6 +116,11 @@ namespace Audiospatial
                 terzo_Scenario1.Show();
                 currUC1 = terzo_Scenario1;
             }
+            else if (onactivity == 4)
+            {
+                primo_Scenario1.Show();
+                currUC1 = primo_Scenario1;
+            }
 
         }
 
@@ -209,6 +214,10 @@ namespace Audiospatial
             else if (onactivity == 3)
             {
                 messageUC1.setMessage("Complimenti !!! Siete arrivati all'aeroporto! Saliamo sull'aereo e partiamo!", "continua");
+            }
+            else if (onactivity == 4)
+            {
+                messageUC1.setMessage("Complimenti !!! Il viaggio è andato a buon fine! Possiamo iniziare l'esplorazione!", "continua");
             }
             message_callback = scenes;
         }

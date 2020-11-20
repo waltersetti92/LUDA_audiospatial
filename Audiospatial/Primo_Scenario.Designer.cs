@@ -57,7 +57,7 @@
             this.labIndicazioni1.BackColor = System.Drawing.Color.Transparent;
             this.labIndicazioni1.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labIndicazioni1.ForeColor = System.Drawing.Color.Black;
-            this.labIndicazioni1.Location = new System.Drawing.Point(81, 97);
+            this.labIndicazioni1.Location = new System.Drawing.Point(152, 101);
             this.labIndicazioni1.Name = "labIndicazioni1";
             this.labIndicazioni1.Size = new System.Drawing.Size(1266, 34);
             this.labIndicazioni1.TabIndex = 2;
@@ -69,7 +69,7 @@
             this.labIstruzioni2.BackColor = System.Drawing.Color.Transparent;
             this.labIstruzioni2.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labIstruzioni2.ForeColor = System.Drawing.Color.Black;
-            this.labIstruzioni2.Location = new System.Drawing.Point(87, 178);
+            this.labIstruzioni2.Location = new System.Drawing.Point(152, 180);
             this.labIstruzioni2.Name = "labIstruzioni2";
             this.labIstruzioni2.Size = new System.Drawing.Size(741, 34);
             this.labIstruzioni2.TabIndex = 3;
@@ -81,7 +81,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(87, 260);
+            this.label1.Location = new System.Drawing.Point(109, 262);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(1101, 34);
             this.label1.TabIndex = 4;
