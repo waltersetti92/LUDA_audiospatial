@@ -31,12 +31,14 @@ namespace Audiospatial
         public int messaggio;
         public int participants;
         public int iDifficulty = 0;
+        public int scenario;
         ResumeFromMessage message_callback = null;
         public Speakers speakers = null;
         public Main()
         {
             onactivity = 1;
-            messaggio = 1;          
+            messaggio = 1;
+            scenario = 1;
             participants = 0;
             speakers = new Speakers();
             Business_Logic BL = new Business_Logic(this);
@@ -147,9 +149,18 @@ namespace Audiospatial
         }
         public void closeMessage()
         {
-            BackgroundImageLayout = ImageLayout.Stretch;
-            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
-            primo_Scenario1.Visible = false;
+            if (onactivity == 2)
+            {
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
+                primo_Scenario1.Visible = false;
+            }
+            else if (onactivity == 3)
+            {
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_trafficjam);
+                secondo_Scenario1.Visible = false;
+            }
             currUC.Visible = true;
             message_callback?.Invoke();
         }
