@@ -22,7 +22,7 @@ namespace Audiospatial
             SetStyle(ControlStyles.Opaque, true);
             this.BackColor = Color.Transparent;
         }
-        public int setMessage(string msg, string bt_text, int i)
+        public void setMessage(string msg, string bt_text)
         {
             Visible = true;
             label.Text = msg;
@@ -40,8 +40,6 @@ namespace Audiospatial
                 btClose.Text = "";
                 btClose.Visible = false;
             }
-            index = i;
-            return index;
         }
         public void setPos(int w, int h)
         {
@@ -64,7 +62,7 @@ namespace Audiospatial
         {
             this.Visible = false;
             parentForm.messaggio = 2; // Questo per il messaggio da mandare in show message
-            parentForm.onStartActivity1(parentForm.iDifficulty, 0,parentForm.participants, "1");
+            parentForm.onStartActivity(parentForm.iDifficulty, 0,parentForm.participants, "1");
 
         }
 

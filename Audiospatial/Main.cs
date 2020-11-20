@@ -27,7 +27,7 @@ namespace Audiospatial
         public SoundPlayer player = null;
         public static readonly int N_SPEAKERS = 3;
         public static readonly bool IS_DEBUG = false;
-        public int counter_form;
+        public int onactivity;
         public int messaggio;
         public int participants;
         public int iDifficulty = 0;
@@ -35,6 +35,7 @@ namespace Audiospatial
         public Speakers speakers = null;
         public Main()
         {
+            onactivity = 1;
             messaggio = 1;          
             participants = 0;
             speakers = new Speakers();
@@ -102,7 +103,6 @@ namespace Audiospatial
             if (currUC != null) currUC.Visible = false;
             secondo_Scenario1.Show();
             currUC1 = secondo_Scenario1;
-            counter_form++;
         }
         public void onStart()
         {
@@ -123,8 +123,16 @@ namespace Audiospatial
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
-            activityUdaUC1.Visible = false;
-            primo_Scenario1.Visible = true;
+            if (onactivity==1)
+            {
+                activityUdaUC1.Visible = false;
+                primo_Scenario1.Visible = true;
+            }
+           else if (onactivity == 2)
+            {
+                messageUC1.Visible = false;
+                secondo_Scenario1.Visible = true;
+            }
 
             iDifficulty = level;
             participants = num_participants;
@@ -133,7 +141,7 @@ namespace Audiospatial
            else debugInfo1.Visible = false;
 
             currUC = activity_Stanza1;
-            currUC1 = secondo_Scenario1;
+            onactivity++;
 
             activity.init(level, type, num_participants, group);
         }
@@ -172,7 +180,6 @@ namespace Audiospatial
             messageUC1.Visible = false;
             secondo_Scenario1.Visible = true;
             message_callback?.Invoke();
-            counter_form++;
         }
         public void onAnswer(string result)
         {
@@ -187,7 +194,7 @@ namespace Audiospatial
         public void onEndActivities()
         {
             currUC.Visible = false;
-            messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua",counter_form);
+            messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua");
             message_callback = traffic;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
