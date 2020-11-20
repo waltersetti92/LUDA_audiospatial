@@ -13,6 +13,8 @@ namespace Audiospatial
     public partial class ActivityUdaUC : UserControl
     {
         public Main parentForm { get; set; }
+        public int participants;
+        public int difficulty;
         public ActivityUdaUC()
         {
             InitializeComponent();
@@ -20,7 +22,8 @@ namespace Audiospatial
             cmbDifficulty.Items.Add(new ComboBoxItem("Medio", 1));
             cmbDifficulty.Items.Add(new ComboBoxItem("Difficile", 2));
             cmbDifficulty.SelectedIndex = 0;
-
+            participants = 0;
+            difficulty = 0;
             cmbParticipants.Items.Add(1);
             cmbParticipants.Items.Add(2);
             cmbParticipants.Items.Add(3);
@@ -52,6 +55,8 @@ namespace Audiospatial
         private void btStart_Click(object sender, EventArgs e)
         {
             this.Visible = false;
+            participants = cmbParticipants.SelectedIndex + 1;
+            difficulty = ((ComboBoxItem)cmbDifficulty.SelectedItem).Value;
             parentForm.onStartActivity(((ComboBoxItem)cmbDifficulty.SelectedItem).Value, 0, cmbParticipants.SelectedIndex + 1, "1");
         }
     }

@@ -13,6 +13,7 @@ namespace Audiospatial
     public partial class MessageUC : UserControl
     {
         public Main parentForm { get; set; }
+        public ActivityUdaUC parentForm1 { get; set; }
         public int index;
         public MessageUC()
         {
@@ -61,12 +62,9 @@ namespace Audiospatial
 
         private void btClose_Click(object sender, EventArgs e)
         {
-            if (index == 1)
-            {
-                parentForm.closeMessage1();
-            }
 
-                //parentForm.closeMessage1();
+         // parentForm.onStartActivity1(parentForm1.difficulty, 0, parentForm1.participants, "1");
+          parentForm.closeMessage1();
 
         }
 

@@ -138,9 +138,22 @@ namespace Audiospatial
             BackgroundImageLayout = ImageLayout.Stretch;
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
             primo_Scenario1.Visible = false;
-            //currUC.Visible = true;
+            currUC.Visible = true;
              secondo_Scenario1.Visible = true;
             message_callback?.Invoke();
+        }
+        public void onStartActivity1(int level, int type, int num_participants, string group)
+        {
+            messageUC1.Visible = false;
+            secondo_Scenario1.Visible = true;
+
+            iDifficulty = level;
+
+            if (Main.IS_DEBUG == true) debugInfo1.Visible = true;
+            else debugInfo1.Visible = false;
+
+            currUC = activity_Stanza1;
+            activity.init(level, type, num_participants, group);
         }
         public void closeMessage1()
         {
