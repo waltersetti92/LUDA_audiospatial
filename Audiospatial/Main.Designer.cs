@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            this.terzo_Scenario1 = new Audiospatial.Terzo_Scenario();
             this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
             this.messageUC1 = new Audiospatial.MessageUC();
             this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
@@ -38,6 +39,16 @@
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
             this.SuspendLayout();
+            // 
+            // terzo_Scenario1
+            // 
+            this.terzo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.plan2;
+            this.terzo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.terzo_Scenario1.Location = new System.Drawing.Point(-6, -4);
+            this.terzo_Scenario1.Name = "terzo_Scenario1";
+            this.terzo_Scenario1.parentForm = null;
+            this.terzo_Scenario1.Size = new System.Drawing.Size(734, 348);
+            this.terzo_Scenario1.TabIndex = 8;
             // 
             // secondo_Scenario1
             // 
@@ -55,6 +66,7 @@
             this.messageUC1.Location = new System.Drawing.Point(7, 8);
             this.messageUC1.Name = "messageUC1";
             this.messageUC1.parentForm = null;
+            this.messageUC1.parentForm1 = null;
             this.messageUC1.Size = new System.Drawing.Size(602, 144);
             this.messageUC1.TabIndex = 6;
             // 
@@ -121,6 +133,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SandyBrown;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.terzo_Scenario1);
             this.Controls.Add(this.secondo_Scenario1);
             this.Controls.Add(this.messageUC1);
             this.Controls.Add(this.activity_Stanza1);
@@ -147,6 +160,7 @@
         private Activity_Stanza activity_Stanza1;
         private MessageUC messageUC1;
         private Secondo_Scenario secondo_Scenario1;
+        private Terzo_Scenario terzo_Scenario1;
     }
 }
 

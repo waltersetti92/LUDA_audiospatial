@@ -19,6 +19,7 @@ namespace Audiospatial
         private const string background_image = "Buco_Nero.jpg";
         private const string background_image_stanza = "bed4.jpg";
         private const string background_image_trafficjam = "traffic3.jpg";
+        private const string background_image_plane = "plan2.jpg";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -51,6 +52,7 @@ namespace Audiospatial
             activity_Stanza1.parentForm = this;
             secondo_Scenario1.parentForm = this;
             messageUC1.parentForm = this;
+            terzo_Scenario1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
@@ -59,6 +61,7 @@ namespace Audiospatial
             activity_Stanza1.Visible = false;
             messageUC1.Visible = false;
             secondo_Scenario1.Visible = false;
+            terzo_Scenario1.Visible = false;
             home();
            BackgroundImageLayout = ImageLayout.Stretch;
            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
@@ -100,12 +103,22 @@ namespace Audiospatial
             initial1.Show();
             currUC = initial1;
         }
-        public void traffic()
+        public void scenes()
         {
             if (currUC != null) currUC.Visible = false;
-            secondo_Scenario1.Show();
-            currUC1 = secondo_Scenario1;
+            if (onactivity == 2)
+            {
+                secondo_Scenario1.Show();
+                currUC1 = secondo_Scenario1;
+            }
+            else if (onactivity == 3)
+            {
+                terzo_Scenario1.Show();
+                currUC1 = terzo_Scenario1;
+            }
+
         }
+
         public void onStart()
         {
             initial1.Visible = false;
@@ -122,6 +135,7 @@ namespace Audiospatial
             activity_Stanza1.setPos(size.Width, size.Height);
             messageUC1.setPos(size.Width, size.Height);
             secondo_Scenario1.setPos(size.Width, size.Height);
+            terzo_Scenario1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -134,6 +148,11 @@ namespace Audiospatial
             {
                 messageUC1.Visible = false;
                 secondo_Scenario1.Visible = true;
+            }
+            else if (onactivity == 3)
+            {
+                messageUC1.Visible = false;
+                terzo_Scenario1.Visible = true;
             }
 
             iDifficulty = level;
@@ -161,35 +180,13 @@ namespace Audiospatial
                 BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_trafficjam);
                 secondo_Scenario1.Visible = false;
             }
+            else if (onactivity == 4)
+            {
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_plane);
+                terzo_Scenario1.Visible = false;
+            }
             currUC.Visible = true;
-            message_callback?.Invoke();
-        }
-        public void closeMessage2()
-        {
-            BackgroundImageLayout = ImageLayout.Stretch;
-            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_trafficjam);
-            secondo_Scenario1.Visible = false;
-            currUC.Visible = true;
-            message_callback?.Invoke();
-        }
-
-        public void onStartActivity1(int level, int type, int num_participants, string group)
-        {
-            messageUC1.Visible = false;
-            secondo_Scenario1.Visible = true;
-
-            iDifficulty = level;
-
-            if (Main.IS_DEBUG == true) debugInfo1.Visible = true;
-            else debugInfo1.Visible = false;
-
-            currUC = activity_Stanza1;
-            activity.init(level, type, num_participants, group);
-        }
-        public void closeMessage1()
-        {
-            messageUC1.Visible = false;
-            secondo_Scenario1.Visible = true;
             message_callback?.Invoke();
         }
         public void onAnswer(string result)
@@ -205,8 +202,15 @@ namespace Audiospatial
         public void onEndActivities()
         {
             currUC.Visible = false;
-            messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto", "continua");
-            message_callback = traffic;
+            if (onactivity == 2)
+            {
+                messageUC1.setMessage("Complimenti !!! Avete svegliato Hinrik! Ora corriamo all'aeroporto!", "continua");                
+            }
+            else if (onactivity == 3)
+            {
+                messageUC1.setMessage("Complimenti !!! Siete arrivati all'aeroporto! Saliamo sull'aereo e partiamo!", "continua");
+            }
+            message_callback = scenes;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
         {
@@ -214,8 +218,10 @@ namespace Audiospatial
             message_callback = clb;
             if (messaggio == 1)
                 primo_Scenario1.setMessage_ps(bt_text);
-            else
+            else if (messaggio==2)
                 secondo_Scenario1.setMessage_ps(bt_text);
+            else if (messaggio == 3)
+                terzo_Scenario1.setMessage_ps(bt_text);
         }
         public void onCountDownEnd()
         {

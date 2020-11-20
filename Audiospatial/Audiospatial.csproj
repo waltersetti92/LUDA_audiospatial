@@ -137,6 +137,12 @@
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
     </Compile>
     <Compile Include="Speakers.cs" />
+    <Compile Include="Terzo_Scenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Terzo_Scenario.Designer.cs">
+      <DependentUpon>Terzo_Scenario.cs</DependentUpon>
+    </Compile>
     <Compile Include="uda_server_communication.cs" />
     <EmbeddedResource Include="ActivityUdaUC.resx">
       <DependentUpon>ActivityUdaUC.cs</DependentUpon>
@@ -175,6 +181,9 @@
     <EmbeddedResource Include="Secondo_Scenario.resx">
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Terzo_Scenario.resx">
+      <DependentUpon>Terzo_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -206,6 +215,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\Resources\car.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plan.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\thunderstorm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\plan2.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
