@@ -73,6 +73,10 @@ namespace Audiospatial
             {
                 parentForm.messaggio = 4; // Questo per il messaggio da mandare in show message               
             }
+            else if (parentForm.onactivity == 5)
+            {
+                parentForm.messaggio = 5; // Questo per il messaggio da mandare in show message               
+            }
             parentForm.onStartActivity(parentForm.iDifficulty, 0, parentForm.participants, "1");
         }
 
