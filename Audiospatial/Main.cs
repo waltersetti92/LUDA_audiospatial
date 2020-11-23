@@ -17,7 +17,7 @@ namespace Audiospatial
         public static readonly string resourcesPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\resources";
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
-        private const string background_image_stanza = "bed5.jpg";
+        private const string background_image_stanza = "bed1.jpg";
         private const string background_image_trafficjam = "traffic3.jpg";
         private const string background_image_plane = "plan2.jpg";
         private const string background_image_tribal = "tribsl5.jpg";
@@ -196,7 +196,9 @@ namespace Audiospatial
             if (onactivity == 2)
             {
                 BackgroundImageLayout = ImageLayout.Stretch;
+                MessageBox.Show(resourcesPath + "\\");
                 BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
+            
                 primo_Scenario1.Visible = false;
             }
             else if (onactivity == 3)
