@@ -113,6 +113,7 @@
             this.Controls.Add(this.label2);
             this.Name = "ActivityUdaUC";
             this.Size = new System.Drawing.Size(609, 309);
+            this.Load += new System.EventHandler(this.ActivityUdaUC_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

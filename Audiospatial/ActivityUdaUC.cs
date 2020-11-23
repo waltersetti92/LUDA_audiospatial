@@ -59,6 +59,11 @@ namespace Audiospatial
             difficulty = ((ComboBoxItem)cmbDifficulty.SelectedItem).Value;
             parentForm.onStartActivity(((ComboBoxItem)cmbDifficulty.SelectedItem).Value, 0, cmbParticipants.SelectedIndex + 1, "1");
         }
+
+        private void ActivityUdaUC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     class ComboBoxItem
     {

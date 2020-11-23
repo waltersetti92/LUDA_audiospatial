@@ -103,7 +103,7 @@ namespace Audiospatial
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
-            initial1.Show();
+            secondo_Scenario1.Show();
             currUC = initial1;
         }
         public void scenes()
