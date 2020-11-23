@@ -267,5 +267,17 @@
   <ItemGroup>
     <None Include="bin\Debug\Resources\tribsl5.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed5.jpg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed5.jpg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bed1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\bed2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

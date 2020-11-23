@@ -13,11 +13,11 @@ namespace Audiospatial
     public partial class Main : Form
     {
         public static readonly string appPath = Path.GetDirectoryName(Application.ExecutablePath);
-        
+        public static readonly string resourcesPath1 = Path.GetDirectoryName(Application.ExecutablePath) + "\\resources1";
         public static readonly string resourcesPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\resources";
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
-        private const string background_image_stanza = "bed1.jpg";
+        private const string background_image_stanza = "bed2.png";
         private const string background_image_trafficjam = "traffic3.jpg";
         private const string background_image_plane = "plan2.jpg";
         private const string background_image_tribal = "tribsl5.jpg";
@@ -157,6 +157,8 @@ namespace Audiospatial
             if (onactivity==1)
             {
                 activityUdaUC1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);
                 primo_Scenario1.Visible = true;
             }
            else if (onactivity == 2)
@@ -195,11 +197,10 @@ namespace Audiospatial
         {
             if (onactivity == 2)
             {
-                BackgroundImageLayout = ImageLayout.Stretch;
-                MessageBox.Show(resourcesPath + "\\");
-                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_stanza);
-            
                 primo_Scenario1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);         
+               
             }
             else if (onactivity == 3)
             {

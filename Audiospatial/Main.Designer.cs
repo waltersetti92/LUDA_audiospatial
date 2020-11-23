@@ -45,7 +45,7 @@
             // messageUC1
             // 
             this.messageUC1.BackColor = System.Drawing.Color.Transparent;
-            this.messageUC1.Location = new System.Drawing.Point(7, 8);
+            this.messageUC1.Location = new System.Drawing.Point(186, 144);
             this.messageUC1.Name = "messageUC1";
             this.messageUC1.parentForm = null;
             this.messageUC1.parentForm1 = null;
@@ -56,7 +56,7 @@
             // 
             this.activity_Stanza1.BackColor = System.Drawing.Color.Transparent;
             this.activity_Stanza1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activity_Stanza1.Location = new System.Drawing.Point(-6, -1);
+            this.activity_Stanza1.Location = new System.Drawing.Point(94, 52);
             this.activity_Stanza1.Name = "activity_Stanza1";
             this.activity_Stanza1.parentForm = null;
             this.activity_Stanza1.Size = new System.Drawing.Size(694, 405);
@@ -65,7 +65,7 @@
             // answerUC1
             // 
             this.answerUC1.BackColor = System.Drawing.Color.Transparent;
-            this.answerUC1.Location = new System.Drawing.Point(-6, -1);
+            this.answerUC1.Location = new System.Drawing.Point(145, 62);
             this.answerUC1.Name = "answerUC1";
             this.answerUC1.parentForm = null;
             this.answerUC1.Size = new System.Drawing.Size(451, 140);
@@ -82,7 +82,7 @@
             // 
             // activityUdaUC1
             // 
-            this.activityUdaUC1.Location = new System.Drawing.Point(8, 4);
+            this.activityUdaUC1.Location = new System.Drawing.Point(123, 18);
             this.activityUdaUC1.Name = "activityUdaUC1";
             this.activityUdaUC1.parentForm = null;
             this.activityUdaUC1.Size = new System.Drawing.Size(609, 309);
@@ -91,7 +91,7 @@
             // initial1
             // 
             this.initial1.BackColor = System.Drawing.Color.Transparent;
-            this.initial1.Location = new System.Drawing.Point(-6, -1);
+            this.initial1.Location = new System.Drawing.Point(112, 18);
             this.initial1.Name = "initial1";
             this.initial1.parentForm = null;
             this.initial1.Size = new System.Drawing.Size(785, 328);
@@ -102,7 +102,7 @@
             // 
             this.quinto_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quinto_Scenario1.BackgroundImage")));
             this.quinto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.quinto_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.quinto_Scenario1.Location = new System.Drawing.Point(145, 62);
             this.quinto_Scenario1.Name = "quinto_Scenario1";
             this.quinto_Scenario1.parentForm = null;
             this.quinto_Scenario1.Size = new System.Drawing.Size(781, 350);
@@ -112,7 +112,7 @@
             // 
             this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.tribsl5;
             this.quarto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.quarto_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.quarto_Scenario1.Location = new System.Drawing.Point(94, 52);
             this.quarto_Scenario1.Name = "quarto_Scenario1";
             this.quarto_Scenario1.parentForm = null;
             this.quarto_Scenario1.Size = new System.Drawing.Size(771, 350);
@@ -122,7 +122,7 @@
             // 
             this.terzo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.plan2;
             this.terzo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.terzo_Scenario1.Location = new System.Drawing.Point(-6, -4);
+            this.terzo_Scenario1.Location = new System.Drawing.Point(69, 35);
             this.terzo_Scenario1.Name = "terzo_Scenario1";
             this.terzo_Scenario1.parentForm = null;
             this.terzo_Scenario1.Size = new System.Drawing.Size(734, 348);
@@ -132,7 +132,7 @@
             // 
             this.secondo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.traffic3;
             this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -4);
+            this.secondo_Scenario1.Location = new System.Drawing.Point(170, 52);
             this.secondo_Scenario1.Name = "secondo_Scenario1";
             this.secondo_Scenario1.parentForm = null;
             this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
@@ -141,9 +141,9 @@
             // primo_Scenario1
             // 
             this.primo_Scenario1.BackColor = System.Drawing.Color.Transparent;
-            this.primo_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("primo_Scenario1.BackgroundImage")));
+            this.primo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
             this.primo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.primo_Scenario1.Location = new System.Drawing.Point(-6, -1);
+            this.primo_Scenario1.Location = new System.Drawing.Point(12, 12);
             this.primo_Scenario1.Name = "primo_Scenario1";
             this.primo_Scenario1.parentForm = null;
             this.primo_Scenario1.Size = new System.Drawing.Size(808, 762);
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SandyBrown;
+            this.BackColor = System.Drawing.Color.LightGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.quinto_Scenario1);
             this.Controls.Add(this.quarto_Scenario1);

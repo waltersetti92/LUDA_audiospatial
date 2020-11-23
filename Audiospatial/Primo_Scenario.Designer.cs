@@ -55,47 +55,47 @@
             // 
             this.labIndicazioni1.AutoSize = true;
             this.labIndicazioni1.BackColor = System.Drawing.Color.Transparent;
-            this.labIndicazioni1.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labIndicazioni1.Font = new System.Drawing.Font("Stencil", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labIndicazioni1.ForeColor = System.Drawing.Color.Black;
-            this.labIndicazioni1.Location = new System.Drawing.Point(70, 89);
+            this.labIndicazioni1.Location = new System.Drawing.Point(70, 109);
             this.labIndicazioni1.Name = "labIndicazioni1";
-            this.labIndicazioni1.Size = new System.Drawing.Size(1266, 34);
+            this.labIndicazioni1.Size = new System.Drawing.Size(725, 38);
             this.labIndicazioni1.TabIndex = 2;
-            this.labIndicazioni1.Text = "HINRIK SI DEVE SVEGLIARE AL PIU\' PRESTO. FAI ATTENZIONE AL SUONO DELLA SVEGLIA";
+            this.labIndicazioni1.Text = "HINRIK SI DEVE SVEGLIARE AL PIU\' PRESTO!";
             // 
             // labIstruzioni2
             // 
             this.labIstruzioni2.AutoSize = true;
             this.labIstruzioni2.BackColor = System.Drawing.Color.Transparent;
-            this.labIstruzioni2.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labIstruzioni2.Font = new System.Drawing.Font("Stencil", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labIstruzioni2.ForeColor = System.Drawing.Color.Black;
-            this.labIstruzioni2.Location = new System.Drawing.Point(70, 160);
+            this.labIstruzioni2.Location = new System.Drawing.Point(70, 175);
             this.labIstruzioni2.Name = "labIstruzioni2";
-            this.labIstruzioni2.Size = new System.Drawing.Size(741, 34);
+            this.labIstruzioni2.Size = new System.Drawing.Size(813, 38);
             this.labIstruzioni2.TabIndex = 3;
-            this.labIstruzioni2.Text = "SENTIRAI LA SVEGLIA DALLE CASSE DAVANTI A TE. ";
+            this.labIstruzioni2.Text = "SENTIRAI LA SVEGLIA DALLE CASSE DAVANTI A TE ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Stencil", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(70, 234);
+            this.label1.Location = new System.Drawing.Point(70, 242);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1101, 34);
+            this.label1.Size = new System.Drawing.Size(994, 38);
             this.label1.TabIndex = 4;
-            this.label1.Text = "RICORDA CHE AD OGNI CASSA CORRISPONDE UNA OPERAZIONE MATEMATICA";
+            this.label1.Text = "AD OGNI CASSA CORRISPONDE UNA OPERAZIONE MATEMATICA";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Stencil", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(70, 309);
+            this.label2.Location = new System.Drawing.Point(70, 314);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(1039, 34);
+            this.label2.Size = new System.Drawing.Size(1153, 38);
             this.label2.TabIndex = 5;
             this.label2.Text = "LE OPERAZIONI RELATIVE ALLE CASSE COMPARIRANNO SULLO SCHERMO";
             // 
@@ -103,11 +103,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(616, 436);
+            this.label3.Font = new System.Drawing.Font("Snap ITC", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Orange;
+            this.label3.Location = new System.Drawing.Point(507, 404);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(286, 34);
+            this.label3.Size = new System.Drawing.Size(488, 48);
             this.label3.TabIndex = 6;
             this.label3.Text = "IN BOCCA AL LUPO!";
             // 
@@ -115,7 +115,7 @@
             // 
             this.Alarm.ErrorImage = null;
             this.Alarm.Image = global::Audiospatial.Properties.Resources.alarm;
-            this.Alarm.Location = new System.Drawing.Point(652, 498);
+            this.Alarm.Location = new System.Drawing.Point(658, 470);
             this.Alarm.Name = "Alarm";
             this.Alarm.Size = new System.Drawing.Size(176, 121);
             this.Alarm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +129,7 @@
             this.Start.BackColor = System.Drawing.Color.Transparent;
             this.Start.Font = new System.Drawing.Font("Snap ITC", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Start.ForeColor = System.Drawing.Color.Orange;
-            this.Start.Location = new System.Drawing.Point(642, 632);
+            this.Start.Location = new System.Drawing.Point(633, 610);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(236, 57);
             this.Start.TabIndex = 8;
@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Audiospatial.Properties.Resources.bed4;
+            this.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Alarm);
             this.Controls.Add(this.label3);

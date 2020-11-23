@@ -16,8 +16,8 @@ namespace Audiospatial
         public Primo_Scenario()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.bed4;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+           this.BackgroundImage = Properties.Resources.bed2;
+          this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
         public void setPos(int w, int h)
         {

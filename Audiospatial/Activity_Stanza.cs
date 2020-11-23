@@ -31,9 +31,9 @@ namespace Audiospatial
         public Activity_Stanza()
         {
             InitializeComponent();          
-            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-            SetStyle(ControlStyles.Opaque, true);
-            this.BackColor = Color.Transparent;
+            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+           // SetStyle(ControlStyles.Opaque, true);
+         //   this.BackColor = Color.Transparent;
             resetOperations();
         }
         private void resetOperations()
