@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.messageUC1 = new Audiospatial.MessageUC();
             this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
             this.answerUC1 = new Audiospatial.AnswerUC();
@@ -100,7 +99,7 @@
             // 
             // quinto_Scenario1
             // 
-            this.quinto_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quinto_Scenario1.BackgroundImage")));
+            this.quinto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.lion1;
             this.quinto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.quinto_Scenario1.Location = new System.Drawing.Point(161, 144);
             this.quinto_Scenario1.Name = "quinto_Scenario1";
@@ -113,10 +112,10 @@
             // 
             this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.popolazione;
             this.quarto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.quarto_Scenario1.Location = new System.Drawing.Point(94, 79);
+            this.quarto_Scenario1.Location = new System.Drawing.Point(94, 12);
             this.quarto_Scenario1.Name = "quarto_Scenario1";
             this.quarto_Scenario1.parentForm = null;
-            this.quarto_Scenario1.Size = new System.Drawing.Size(771, 350);
+            this.quarto_Scenario1.Size = new System.Drawing.Size(771, 417);
             this.quarto_Scenario1.TabIndex = 9;
             // 
             // terzo_Scenario1

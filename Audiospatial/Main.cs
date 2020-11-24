@@ -19,9 +19,9 @@ namespace Audiospatial
         private const string background_image = "Buco_Nero.jpg";
         private const string background_image_stanza = "bed2.png";
         private const string background_image_trafficjam = "trafficjam.png";
-        private const string background_image_plane = "plane3.jpg";
+        private const string background_image_plane = "plane3.png";
         private const string background_image_tribal = "popolazione.png";
-        private const string background_image_lion = "lion.jpg";
+        private const string background_image_lion = "lion1.png";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -103,7 +103,7 @@ namespace Audiospatial
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
-            initial1.Show();
+            quinto_Scenario1.Show();
             currUC = initial1;
         }
         public void scenes()
@@ -229,7 +229,7 @@ namespace Audiospatial
             else if (onactivity == 6)
             {
                 BackgroundImageLayout = ImageLayout.Stretch;
-                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_lion);
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_lion);
                 quinto_Scenario1.Visible = false;
             }
             currUC.Visible = true;
@@ -262,7 +262,7 @@ namespace Audiospatial
             }
             else if (onactivity == 5)
             {
-                messageUC1.setMessage("Complimenti !!! La popolazione ti ha dato dei suggerimenti per trovare il tesoro! Andiamo!", "continua");
+                messageUC1.setMessage("Complimenti !!! La popolazione ti ha suggerito dove trovare il tesoro!", "continua");
             }
             else if (onactivity == 6)
             {

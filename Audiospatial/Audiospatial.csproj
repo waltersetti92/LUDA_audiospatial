@@ -294,5 +294,8 @@
   <ItemGroup>
     <None Include="bin\Debug\Resources\fire.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\lion1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
