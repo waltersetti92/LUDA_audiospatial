@@ -17,7 +17,7 @@ namespace Audiospatial
         public static readonly string resourcesPath = Path.GetDirectoryName(Application.ExecutablePath) + "\\resources";
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
-        private const string background_image_stanza = "bed2.png";
+        private const string background_image_stanza = "bedsingle.png";
         private const string background_image_trafficjam = "trafficjam.png";
         private const string background_image_plane = "plane3.png";
         private const string background_image_tribal = "popolazione.png";

@@ -43,10 +43,6 @@ namespace Audiospatial
                 Start.Visible = false;
             }
         }
-        private void Alarm_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void Primo_Scenario_Load(object sender, EventArgs e)
         {
@@ -59,6 +55,11 @@ namespace Audiospatial
         }
 
         private void Alarm_Click_1(object sender, EventArgs e)
+        {
+            parentForm.playbackResourceAudio("Alarm_sound");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
             parentForm.playbackResourceAudio("Alarm_sound");
         }

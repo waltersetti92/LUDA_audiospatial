@@ -77,7 +77,7 @@
             // 
             this.secondo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.trafficjam;
             this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.secondo_Scenario1.Location = new System.Drawing.Point(42, 12);
             this.secondo_Scenario1.Name = "secondo_Scenario1";
             this.secondo_Scenario1.parentForm = null;
             this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
@@ -123,8 +123,8 @@
             // 
             // primo_Scenario1
             // 
-            this.primo_Scenario1.BackColor = System.Drawing.Color.Transparent;
-            this.primo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
+            this.primo_Scenario1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.primo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.bedsingle1;
             this.primo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.primo_Scenario1.Location = new System.Drawing.Point(-1, -1);
             this.primo_Scenario1.Name = "primo_Scenario1";
@@ -153,7 +153,7 @@
             // sesto_Scenario1
             // 
             this.sesto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.temple;
-            this.sesto_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.sesto_Scenario1.Location = new System.Drawing.Point(103, 18);
             this.sesto_Scenario1.Name = "sesto_Scenario1";
             this.sesto_Scenario1.parentForm = null;
             this.sesto_Scenario1.Size = new System.Drawing.Size(736, 361);
