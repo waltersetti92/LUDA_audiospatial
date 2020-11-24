@@ -228,3 +228,4 @@ C:\Users\Luigi\Source\Repos\LUDA_audiospatial8\Audiospatial\obj\Debug\Audiospati
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial8\Audiospatial\obj\Debug\Audiospatial.csproj.CopyComplete
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial8\Audiospatial\obj\Debug\Audiospatial.exe
 C:\Users\Luigi\Source\Repos\LUDA_audiospatial8\Audiospatial\obj\Debug\Audiospatial.pdb
+C:\Users\Luigi\Source\Repos\LUDA_audiospatial8\Audiospatial\obj\Debug\Audiospatial.Sesto_Scenario.resources

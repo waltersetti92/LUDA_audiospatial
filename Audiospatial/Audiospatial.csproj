@@ -148,6 +148,12 @@
     <Compile Include="Secondo_Scenario.Designer.cs">
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Sesto_Scenario.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Sesto_Scenario.Designer.cs">
+      <DependentUpon>Sesto_Scenario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Speakers.cs" />
     <Compile Include="Terzo_Scenario.cs">
       <SubType>UserControl</SubType>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secondo_Scenario.resx">
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sesto_Scenario.resx">
+      <DependentUpon>Sesto_Scenario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Terzo_Scenario.resx">
       <DependentUpon>Terzo_Scenario.cs</DependentUpon>
@@ -296,6 +305,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="bin\Debug\resources1\lion1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\temple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Resources\Dreamcatcher.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

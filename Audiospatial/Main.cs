@@ -22,6 +22,7 @@ namespace Audiospatial
         private const string background_image_plane = "plane3.png";
         private const string background_image_tribal = "popolazione.png";
         private const string background_image_lion = "lion1.png";
+        private const string background_image_maya = "temple.png";
         private const string activities_json = "activities.json";
         private readonly ActivityMathSpatialAudio activity;
         private readonly Activities activitiesList;
@@ -57,6 +58,7 @@ namespace Audiospatial
             terzo_Scenario1.parentForm = this;
             quarto_Scenario1.parentForm = this;
             quinto_Scenario1.parentForm = this;
+            sesto_Scenario1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
@@ -68,6 +70,7 @@ namespace Audiospatial
             terzo_Scenario1.Visible = false;
             quarto_Scenario1.Visible = false;
             quinto_Scenario1.Visible = false;
+            sesto_Scenario1.Visible = false;
             home();
             BackgroundImageLayout = ImageLayout.Stretch;
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
@@ -103,7 +106,7 @@ namespace Audiospatial
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
-            quinto_Scenario1.Show();
+            initial1.Show();
             currUC = initial1;
         }
         public void scenes()
@@ -129,6 +132,11 @@ namespace Audiospatial
                 quinto_Scenario1.Show();
                 currUC1 = quinto_Scenario1;
             }
+            else if (onactivity == 6)
+            {
+                sesto_Scenario1.Show();
+                currUC1 = sesto_Scenario1;
+            }
 
         }
 
@@ -151,6 +159,7 @@ namespace Audiospatial
             terzo_Scenario1.setPos(size.Width, size.Height);
             quarto_Scenario1.setPos(size.Width, size.Height);
             quinto_Scenario1.setPos(size.Width, size.Height);
+           sesto_Scenario1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -185,7 +194,16 @@ namespace Audiospatial
             else if (onactivity == 5)
             {
                 messageUC1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_lion);
                 quinto_Scenario1.Visible = true;
+            }
+            else if (onactivity == 6)
+            {
+                messageUC1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_maya);
+                sesto_Scenario1.Visible = true;
             }
 
             iDifficulty = level;
@@ -232,6 +250,12 @@ namespace Audiospatial
                 BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_lion);
                 quinto_Scenario1.Visible = false;
             }
+            else if (onactivity == 7)
+            {
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_maya);
+                sesto_Scenario1.Visible = false;
+            }
             currUC.Visible = true;
             message_callback?.Invoke();
         }
@@ -268,6 +292,10 @@ namespace Audiospatial
             {
                 messageUC1.setMessage("Complimenti !!! Hai superato l'ostacolo del leone! Recupera il tesoro", "continua");
             }
+            else if (onactivity == 7)
+            {
+                //messageUC1.setMessage("Complimenti !!! Hai superato l'ostacolo del leone!  il tesoro", "continua");
+            }
             message_callback = scenes;
         }
         public void showMessage(string msg, string bt_text, ResumeFromMessage clb = null)
@@ -284,6 +312,8 @@ namespace Audiospatial
                 quarto_Scenario1.setMessage_ps(bt_text);
             else if (messaggio == 5)
                 quinto_Scenario1.setMessage_ps(bt_text);
+            else if (messaggio == 5)
+                sesto_Scenario1.setMessage_ps(bt_text);
         }
         public void onCountDownEnd()
         {

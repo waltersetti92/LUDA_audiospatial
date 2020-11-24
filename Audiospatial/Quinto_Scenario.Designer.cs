@@ -104,11 +104,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Stencil", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Snap ITC", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
             this.label3.Location = new System.Drawing.Point(552, 398);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(390, 47);
+            this.label3.Size = new System.Drawing.Size(525, 51);
             this.label3.TabIndex = 7;
             this.label3.Text = "IN BOCCA AL LUPO!";
             // 

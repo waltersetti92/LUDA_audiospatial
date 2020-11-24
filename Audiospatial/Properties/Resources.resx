@@ -166,6 +166,9 @@
   <data name="drums" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Resources\drums.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="temple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resources1\temple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="bed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bed1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -196,13 +199,16 @@
   <data name="trafficjam" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\resources1\trafficjam.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="lion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\resources1\lion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="thunderstorm" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Resources\thunderstorm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="african" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\bin\Debug\Resources\african.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lion1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\bin\Debug\resources1\lion1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Dreamcatcher" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\bin\Debug\Resources\Dreamcatcher.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
