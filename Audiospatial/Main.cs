@@ -59,6 +59,7 @@ namespace Audiospatial
             quarto_Scenario1.parentForm = this;
             quinto_Scenario1.parentForm = this;
             sesto_Scenario1.parentForm = this;
+            scenaFinale1.parentForm = this;
             initial1.Visible = false;
             activityUdaUC1.Visible = false;
             primo_Scenario1.Visible = false;
@@ -71,6 +72,7 @@ namespace Audiospatial
             quarto_Scenario1.Visible = false;
             quinto_Scenario1.Visible = false;
             sesto_Scenario1.Visible = false;
+            scenaFinale1.Visible = false;
             home();
             BackgroundImageLayout = ImageLayout.Stretch;
             BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
@@ -106,7 +108,7 @@ namespace Audiospatial
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
-            initial1.Show();
+            scenaFinale1.Show();
             currUC = initial1;
         }
         public void scenes()
@@ -160,6 +162,7 @@ namespace Audiospatial
             quarto_Scenario1.setPos(size.Width, size.Height);
             quinto_Scenario1.setPos(size.Width, size.Height);
            sesto_Scenario1.setPos(size.Width, size.Height);
+            scenaFinale1.setPos(size.Width, size.Height);
         }
         public void onStartActivity(int level, int type, int num_participants, string group)
         {
@@ -294,6 +297,8 @@ namespace Audiospatial
             }
             else if (onactivity == 7)
             {
+                sesto_Scenario1.Visible = false;
+                scenaFinale1.Visible = true;
                 //messageUC1.setMessage("Complimenti !!! Hai superato l'ostacolo del leone!  il tesoro", "continua");
             }
             message_callback = scenes;

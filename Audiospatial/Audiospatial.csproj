@@ -142,6 +142,12 @@
       <DependentUpon>Quinto_Scenario.cs</DependentUpon>
     </Compile>
     <Compile Include="RandomTools.cs" />
+    <Compile Include="ScenaFinale.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScenaFinale.Designer.cs">
+      <DependentUpon>ScenaFinale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Secondo_Scenario.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Quinto_Scenario.resx">
       <DependentUpon>Quinto_Scenario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScenaFinale.resx">
+      <DependentUpon>ScenaFinale.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Secondo_Scenario.resx">
       <DependentUpon>Secondo_Scenario.cs</DependentUpon>
@@ -317,6 +326,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\bedsingle1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\hinrik.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
