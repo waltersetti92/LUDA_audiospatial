@@ -60,7 +60,7 @@ namespace Audiospatial
 
         private void Alarm_Click(object sender, EventArgs e)
         {
-            parentForm.playbackResourceAudio("16");
+            parentForm.playbackResourceAudio("12");
         }
     }
 }

@@ -44,7 +44,7 @@
             this.labPrimoScenario.AutoSize = true;
             this.labPrimoScenario.BackColor = System.Drawing.Color.Transparent;
             this.labPrimoScenario.Font = new System.Drawing.Font("Snap ITC", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labPrimoScenario.ForeColor = System.Drawing.Color.DarkRed;
+            this.labPrimoScenario.ForeColor = System.Drawing.Color.ForestGreen;
             this.labPrimoScenario.Location = new System.Drawing.Point(540, 0);
             this.labPrimoScenario.Name = "labPrimoScenario";
             this.labPrimoScenario.Size = new System.Drawing.Size(465, 63);
@@ -92,7 +92,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Snap ITC", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DarkRed;
+            this.label3.ForeColor = System.Drawing.Color.ForestGreen;
             this.label3.Location = new System.Drawing.Point(505, 400);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(525, 51);
@@ -117,7 +117,7 @@
             this.Start.AutoSize = true;
             this.Start.BackColor = System.Drawing.Color.Transparent;
             this.Start.Font = new System.Drawing.Font("Snap ITC", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Start.ForeColor = System.Drawing.Color.DarkRed;
+            this.Start.ForeColor = System.Drawing.Color.ForestGreen;
             this.Start.Location = new System.Drawing.Point(633, 610);
             this.Start.Name = "Start";
             this.Start.Size = new System.Drawing.Size(236, 57);

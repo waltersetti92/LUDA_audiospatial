@@ -111,7 +111,7 @@
             // 
             // quarto_Scenario1
             // 
-            this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.tribsl5;
+            this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.popolazione;
             this.quarto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.quarto_Scenario1.Location = new System.Drawing.Point(94, 79);
             this.quarto_Scenario1.Name = "quarto_Scenario1";
