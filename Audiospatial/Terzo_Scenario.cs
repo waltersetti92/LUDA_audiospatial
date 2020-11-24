@@ -16,8 +16,7 @@ namespace Audiospatial
         public Terzo_Scenario()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.jungle;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+         
         }
         public void setPos(int w, int h)
         {

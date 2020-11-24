@@ -285,5 +285,8 @@
   <ItemGroup>
     <None Include="bin\Debug\resources1\trafficjam.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\resources1\plane3.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

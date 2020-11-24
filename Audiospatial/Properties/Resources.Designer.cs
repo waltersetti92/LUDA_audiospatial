@@ -203,6 +203,16 @@ namespace Audiospatial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plane3 {
+            get {
+                object obj = ResourceManager.GetObject("plane3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap thunderstorm {
             get {
                 object obj = ResourceManager.GetObject("thunderstorm", resourceCulture);

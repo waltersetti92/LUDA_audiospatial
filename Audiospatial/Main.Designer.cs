@@ -29,58 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.quinto_Scenario1 = new Audiospatial.Quinto_Scenario();
-            this.quarto_Scenario1 = new Audiospatial.Quarto_Scenario();
-            this.terzo_Scenario1 = new Audiospatial.Terzo_Scenario();
-            this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
             this.messageUC1 = new Audiospatial.MessageUC();
             this.activity_Stanza1 = new Audiospatial.Activity_Stanza();
             this.answerUC1 = new Audiospatial.AnswerUC();
             this.debugInfo1 = new Audiospatial.debugInfo();
-            this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.activityUdaUC1 = new Audiospatial.ActivityUdaUC();
             this.initial1 = new Audiospatial.Initial();
+            this.quinto_Scenario1 = new Audiospatial.Quinto_Scenario();
+            this.quarto_Scenario1 = new Audiospatial.Quarto_Scenario();
+            this.terzo_Scenario1 = new Audiospatial.Terzo_Scenario();
+            this.secondo_Scenario1 = new Audiospatial.Secondo_Scenario();
+            this.primo_Scenario1 = new Audiospatial.Primo_Scenario();
             this.SuspendLayout();
-            // 
-            // quinto_Scenario1
-            // 
-            this.quinto_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quinto_Scenario1.BackgroundImage")));
-            this.quinto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.quinto_Scenario1.Location = new System.Drawing.Point(145, 62);
-            this.quinto_Scenario1.Name = "quinto_Scenario1";
-            this.quinto_Scenario1.parentForm = null;
-            this.quinto_Scenario1.Size = new System.Drawing.Size(781, 350);
-            this.quinto_Scenario1.TabIndex = 10;
-            // 
-            // quarto_Scenario1
-            // 
-            this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.tribsl5;
-            this.quarto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.quarto_Scenario1.Location = new System.Drawing.Point(186, 52);
-            this.quarto_Scenario1.Name = "quarto_Scenario1";
-            this.quarto_Scenario1.parentForm = null;
-            this.quarto_Scenario1.Size = new System.Drawing.Size(771, 350);
-            this.quarto_Scenario1.TabIndex = 9;
-            // 
-            // terzo_Scenario1
-            // 
-            this.terzo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.plan2;
-            this.terzo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.terzo_Scenario1.Location = new System.Drawing.Point(163, 109);
-            this.terzo_Scenario1.Name = "terzo_Scenario1";
-            this.terzo_Scenario1.parentForm = null;
-            this.terzo_Scenario1.Size = new System.Drawing.Size(734, 348);
-            this.terzo_Scenario1.TabIndex = 8;
-            // 
-            // secondo_Scenario1
-            // 
-            this.secondo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.trafficjam;
-            this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.secondo_Scenario1.Location = new System.Drawing.Point(40, 15);
-            this.secondo_Scenario1.Name = "secondo_Scenario1";
-            this.secondo_Scenario1.parentForm = null;
-            this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
-            this.secondo_Scenario1.TabIndex = 7;
             // 
             // messageUC1
             // 
@@ -96,7 +56,7 @@
             // 
             this.activity_Stanza1.BackColor = System.Drawing.Color.Transparent;
             this.activity_Stanza1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.activity_Stanza1.Location = new System.Drawing.Point(94, 52);
+            this.activity_Stanza1.Location = new System.Drawing.Point(145, 62);
             this.activity_Stanza1.Name = "activity_Stanza1";
             this.activity_Stanza1.parentForm = null;
             this.activity_Stanza1.Size = new System.Drawing.Size(694, 405);
@@ -120,17 +80,6 @@
             this.debugInfo1.Size = new System.Drawing.Size(260, 40);
             this.debugInfo1.TabIndex = 3;
             // 
-            // primo_Scenario1
-            // 
-            this.primo_Scenario1.BackColor = System.Drawing.Color.Transparent;
-            this.primo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
-            this.primo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.primo_Scenario1.Location = new System.Drawing.Point(-1, -1);
-            this.primo_Scenario1.Name = "primo_Scenario1";
-            this.primo_Scenario1.parentForm = null;
-            this.primo_Scenario1.Size = new System.Drawing.Size(808, 762);
-            this.primo_Scenario1.TabIndex = 2;
-            // 
             // activityUdaUC1
             // 
             this.activityUdaUC1.Location = new System.Drawing.Point(123, 18);
@@ -148,6 +97,58 @@
             this.initial1.Size = new System.Drawing.Size(785, 328);
             this.initial1.TabIndex = 0;
             this.initial1.Load += new System.EventHandler(this.initial1_Load);
+            // 
+            // quinto_Scenario1
+            // 
+            this.quinto_Scenario1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("quinto_Scenario1.BackgroundImage")));
+            this.quinto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.quinto_Scenario1.Location = new System.Drawing.Point(161, 144);
+            this.quinto_Scenario1.Name = "quinto_Scenario1";
+            this.quinto_Scenario1.parentForm = null;
+            this.quinto_Scenario1.Size = new System.Drawing.Size(781, 350);
+            this.quinto_Scenario1.TabIndex = 10;
+            this.quinto_Scenario1.Load += new System.EventHandler(this.quinto_Scenario1_Load);
+            // 
+            // quarto_Scenario1
+            // 
+            this.quarto_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.tribsl5;
+            this.quarto_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.quarto_Scenario1.Location = new System.Drawing.Point(94, 79);
+            this.quarto_Scenario1.Name = "quarto_Scenario1";
+            this.quarto_Scenario1.parentForm = null;
+            this.quarto_Scenario1.Size = new System.Drawing.Size(771, 350);
+            this.quarto_Scenario1.TabIndex = 9;
+            // 
+            // terzo_Scenario1
+            // 
+            this.terzo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.plane3;
+            this.terzo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.terzo_Scenario1.Location = new System.Drawing.Point(73, 33);
+            this.terzo_Scenario1.Name = "terzo_Scenario1";
+            this.terzo_Scenario1.parentForm = null;
+            this.terzo_Scenario1.Size = new System.Drawing.Size(734, 348);
+            this.terzo_Scenario1.TabIndex = 8;
+            // 
+            // secondo_Scenario1
+            // 
+            this.secondo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.trafficjam;
+            this.secondo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.secondo_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.secondo_Scenario1.Name = "secondo_Scenario1";
+            this.secondo_Scenario1.parentForm = null;
+            this.secondo_Scenario1.Size = new System.Drawing.Size(618, 331);
+            this.secondo_Scenario1.TabIndex = 7;
+            // 
+            // primo_Scenario1
+            // 
+            this.primo_Scenario1.BackColor = System.Drawing.Color.Transparent;
+            this.primo_Scenario1.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
+            this.primo_Scenario1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.primo_Scenario1.Location = new System.Drawing.Point(-1, -1);
+            this.primo_Scenario1.Name = "primo_Scenario1";
+            this.primo_Scenario1.parentForm = null;
+            this.primo_Scenario1.Size = new System.Drawing.Size(808, 762);
+            this.primo_Scenario1.TabIndex = 2;
             // 
             // Main
             // 

@@ -19,7 +19,7 @@ namespace Audiospatial
         private const string background_image = "Buco_Nero.jpg";
         private const string background_image_stanza = "bed2.png";
         private const string background_image_trafficjam = "trafficjam.png";
-        private const string background_image_plane = "plan2.jpg";
+        private const string background_image_plane = "plane2.jpg";
         private const string background_image_tribal = "tribsl5.jpg";
         private const string background_image_lion = "lion.jpg";
         private const string activities_json = "activities.json";
@@ -69,8 +69,8 @@ namespace Audiospatial
             quarto_Scenario1.Visible = false;
             quinto_Scenario1.Visible = false;
             home();
-           BackgroundImageLayout = ImageLayout.Stretch;
-           BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
+            BackgroundImageLayout = ImageLayout.Stretch;
+            BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image);
 
             activitiesList = readActivitiesList();
             activity = new ActivityMathSpatialAudio(activitiesList, this, speakers, activity_Stanza1, debugInfo1);
@@ -165,12 +165,14 @@ namespace Audiospatial
             {
                 messageUC1.Visible = false;
                 BackgroundImageLayout = ImageLayout.Stretch;
-               BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_trafficjam);
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_trafficjam);
                 secondo_Scenario1.Visible = true;
             }
             else if (onactivity == 3)
             {
                 messageUC1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_plane);
                 terzo_Scenario1.Visible = true;
             }
             else if (onactivity == 4)
@@ -200,8 +202,8 @@ namespace Audiospatial
             if (onactivity == 2)
             {
                 primo_Scenario1.Visible = false;
-              //  BackgroundImageLayout = ImageLayout.Stretch;
-               // BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);         
+                BackgroundImageLayout = ImageLayout.Stretch;
+                 BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);         
                
             }
             else if (onactivity == 3)
@@ -213,7 +215,7 @@ namespace Audiospatial
             else if (onactivity == 4)
             {
                 BackgroundImageLayout = ImageLayout.Stretch;
-                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_plane);
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_plane);
                 terzo_Scenario1.Visible = false;
             }
             else if (onactivity == 5)
@@ -299,6 +301,11 @@ namespace Audiospatial
         }
 
         private void initial1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void quinto_Scenario1_Load(object sender, EventArgs e)
         {
 
         }
