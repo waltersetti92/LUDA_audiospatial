@@ -141,7 +141,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Transparent;
-            this.BackgroundImage = global::Audiospatial.Properties.Resources.bed1;
+            this.BackgroundImage = global::Audiospatial.Properties.Resources.african;
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Alarm);
             this.Controls.Add(this.label3);

@@ -30,10 +30,10 @@ namespace Audiospatial
         private Main mn;
         public Activity_Stanza()
         {
-            InitializeComponent();          
-            //SetStyle(ControlStyles.SupportsTransparentBackColor, true);
-           // SetStyle(ControlStyles.Opaque, true);
-         //   this.BackColor = Color.Transparent;
+            InitializeComponent();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            SetStyle(ControlStyles.Opaque, true);
+            this.BackColor = Color.Transparent;
             resetOperations();
         }
         private void resetOperations()

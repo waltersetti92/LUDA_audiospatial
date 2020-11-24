@@ -18,7 +18,7 @@ namespace Audiospatial
         public static readonly string resultsDir = Path.GetDirectoryName(Application.ExecutablePath) + "\\results";
         private const string background_image = "Buco_Nero.jpg";
         private const string background_image_stanza = "bed2.png";
-        private const string background_image_trafficjam = "traffic3.jpg";
+        private const string background_image_trafficjam = "trafficjam.png";
         private const string background_image_plane = "plan2.jpg";
         private const string background_image_tribal = "tribsl5.jpg";
         private const string background_image_lion = "lion.jpg";
@@ -103,7 +103,7 @@ namespace Audiospatial
         public void home()
         {
             if (currUC != null) currUC.Visible = false;
-            secondo_Scenario1.Show();
+            initial1.Show();
             currUC = initial1;
         }
         public void scenes()
@@ -157,13 +157,15 @@ namespace Audiospatial
             if (onactivity==1)
             {
                 activityUdaUC1.Visible = false;
-                BackgroundImageLayout = ImageLayout.Stretch;
-                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);
+               BackgroundImageLayout = ImageLayout.Stretch;
+               BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);
                 primo_Scenario1.Visible = true;
             }
            else if (onactivity == 2)
             {
                 messageUC1.Visible = false;
+                BackgroundImageLayout = ImageLayout.Stretch;
+               BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_trafficjam);
                 secondo_Scenario1.Visible = true;
             }
             else if (onactivity == 3)
@@ -198,14 +200,14 @@ namespace Audiospatial
             if (onactivity == 2)
             {
                 primo_Scenario1.Visible = false;
-                BackgroundImageLayout = ImageLayout.Stretch;
-                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);         
+              //  BackgroundImageLayout = ImageLayout.Stretch;
+               // BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_stanza);         
                
             }
             else if (onactivity == 3)
             {
                 BackgroundImageLayout = ImageLayout.Stretch;
-                BackgroundImage = Image.FromFile(resourcesPath + "\\" + background_image_trafficjam);
+                BackgroundImage = Image.FromFile(resourcesPath1 + "\\" + background_image_trafficjam);
                 secondo_Scenario1.Visible = false;
             }
             else if (onactivity == 4)

@@ -223,6 +223,16 @@ namespace Audiospatial.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap traffic1 {
+            get {
+                object obj = ResourceManager.GetObject("traffic1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap traffic2 {
             get {
                 object obj = ResourceManager.GetObject("traffic2", resourceCulture);
@@ -236,6 +246,36 @@ namespace Audiospatial.Properties {
         internal static System.Drawing.Bitmap traffic3 {
             get {
                 object obj = ResourceManager.GetObject("traffic3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap traffic4 {
+            get {
+                object obj = ResourceManager.GetObject("traffic4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trafficjam {
+            get {
+                object obj = ResourceManager.GetObject("trafficjam", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trafficjam1 {
+            get {
+                object obj = ResourceManager.GetObject("trafficjam1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

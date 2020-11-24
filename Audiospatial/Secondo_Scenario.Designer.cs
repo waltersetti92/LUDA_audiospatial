@@ -141,7 +141,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Audiospatial.Properties.Resources.traffic2;
+            this.BackgroundImage = global::Audiospatial.Properties.Resources.trafficjam1;
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Start);
             this.Controls.Add(this.Alarm);

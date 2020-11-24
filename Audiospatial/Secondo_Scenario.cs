@@ -16,8 +16,8 @@ namespace Audiospatial
         public Secondo_Scenario()
         {
             InitializeComponent();
-            this.BackgroundImage = Properties.Resources.traffic2;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            //this.BackgroundImage = Properties.Resources.trafficjam;
+            //this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
         }
         public void setPos(int w, int h)
         {
